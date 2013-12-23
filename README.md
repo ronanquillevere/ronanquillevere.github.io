@@ -1,4 +1,5 @@
-ronanquillevere.github.io
+Ronan Quillevere's home page on github
 =========================
 
-Ronan Quillevere Home Page
+Go to my [homepage](http://ronanquillevere.github.io/)
+
