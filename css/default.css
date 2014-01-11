@@ -65,5 +65,10 @@ body {
 	color: rgb(185, 185, 185);
 }
 
+nav a i {
+	font-size: 1.8rem;
+	margin-right: 5px;
+}
+
 
  
