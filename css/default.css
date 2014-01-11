@@ -10,3 +10,54 @@ body {
 	background-image: url(/img/face.png);
 	background-size: cover; 
 }
+
+#selfie {
+	float: left;
+	/*transform:rotate(7deg);
+	-ms-transform:rotate(7deg);  IE 9 
+	-webkit-transform:rotate(7deg); /* Safari and Chrome */
+	width: 130px;
+	margin: 20px;
+}
+
+#introduction {
+	margin: 20px;
+}
+
+#profiles {
+	margin-top: 20px;
+	line-height: 2.5rem;
+	/*text-align: right;*/
+}
+
+#profiles i {
+	margin-right: 5px;
+	font-size: 4rem;
+}
+
+#profiles a {
+	/*display: block;*/
+}
+
+#profiles .fa-github {
+	color:black;
+}
+
+#profiles .fa-facebook-square {
+	color: #3B5998;
+}
+
+#profiles .fa-linkedin-square {
+	color: #4875B4;
+}
+
+#profiles .fa-twitter {
+	color: #33CCFF;
+}
+
+#about {
+	margin: 20px;
+}
+
+
+ 
