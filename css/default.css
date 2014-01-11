@@ -1,0 +1,12 @@
+body { 
+	position: relative;
+	padding-top: 50px;
+	margin: 0;
+	width: 100%;
+}
+
+#home-background {
+	background-color: #383838;
+	background-image: url(/img/face.png);
+	background-size: cover; 
+}
