@@ -72,10 +72,10 @@ nav a i {
 }
 
 
-nav a i:hover
+nav a:hover i
 {
-	animation: wobble 5s;
-	-webkit-animation: wobble 5s; /* Safari and Chrome */
+	animation: wobble 0.5s;
+	-webkit-animation: wobble 0.5s; /* Safari and Chrome */
 }
 
 

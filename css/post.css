@@ -1,3 +1,33 @@
 #disqus_thread {
 	margin: 20px;
 }
+
+.post-menu {
+	float: right;
+	margin: 10px;
+	border: 1px solid #E4E4E4;
+	padding: 5px;
+	border-radius: 4px;
+	background-color: #FAFAFA;
+}
+
+.post-menu h2 {
+	font-size: 1.5rem;	
+	margin: 0;
+	margin-bottom: 5px;
+	color: #BBBBBB;
+}
+
+.post-menu h3 {
+	font-size: 1.3rem;
+	margin: 0;
+	margin-bottom: 5px;	
+}
+
+.post-menu li {
+	font-size: 1.3rem;
+}
+
+.post {
+	margin: 10px;
+}
