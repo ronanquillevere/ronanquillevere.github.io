@@ -45,7 +45,32 @@ layout: defaultpost
 
 
 {{ content }}
+
+
+<div id="page-navigation"> 
+        <span class="previous-post"> 
+        {% if page.previous.url %} 
+                &lt;&lt; <a href="{{page.previous.url}}">"{{page.previous.title}}"</a> |
+        {% endif %} 
+        </span> 
+
+        <span class="blog-index"> 
+                 <a href="/blog.html">Blog Index</a> 
+        </span> 
+        <span class="top"> 
+                | <a href="{{page.url}}#">Top</a> 
+        </span> 
+
+        <span class="next-post"> 
+        {% if page.next.url %} 
+                | <a href="{{page.next.url}}">"{{page.next.title}}"</a> &gt;&gt;
+        {% endif %} 
+        </span> 
 </div>
+
+</div>
+
+
 
 
 <div id="disqus_thread"></div>

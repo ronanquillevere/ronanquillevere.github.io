@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"s",
+				"small	Tag"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"pos",
+				"post-menu"
+			],
+			[
 				"mar",
 				"margin-right"
 			],
@@ -22,10 +34,6 @@
 			[
 				"font",
 				"font-size"
-			],
-			[
-				"margin",
-				"margin-top"
 			],
 			[
 				"bac",
@@ -64,10 +72,29 @@
 			}
 		},
 		{
-			"file": "css/default.css",
+			"file": "_layouts/default.html",
 			"settings":
 			{
-				"buffer_size": 2818,
+				"buffer_size": 183,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_layouts/defaultpost.html",
+			"settings":
+			{
+				"buffer_size": 210,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "body { \n	position: relative;\n	padding-top: 50px;\n	margin: 0;\n	width: 100%;\n}\n\n#home-background {\n	background-color: #383838;\n	background-image: url(/img/face.png);\n	background-size: cover; \n}\n\n#selfie {\n	float: left;\n	/*transform:rotate(7deg);\n	-ms-transform:rotate(7deg);  IE 9 \n	-webkit-transform:rotate(7deg); /* Safari and Chrome */\n	width: 130px;\n	margin: 20px;\n}\n\n#introduction {\n	margin: 20px;\n}\n\n#profiles {\n	margin-top: 20px;\n	line-height: 2.5rem;\n	/*text-align: right;*/\n}\n\n#profiles i {\n	margin-right: 5px;\n	font-size: 4rem;\n}\n\n#profiles a {\n	/*display: block;*/\n}\n\n#profiles .fa-github {\n	color:black;\n}\n\n#profiles .fa-facebook-square {\n	color: #3B5998;\n}\n\n#profiles .fa-linkedin-square {\n	color: #4875B4;\n}\n\n#profiles .fa-twitter {\n	color: #33CCFF;\n}\n\n#about {\n	margin: 20px;\n}\n\n#tools {\n	font-size: 0.9rem;\n	text-align: center;\n	color: rgb(185, 185, 185);\n}\n\nnav a i {\n	font-size: 1.8rem;\n	margin-right: 5px;\n}\n\nnav a i {\n    font-size: 1.8rem;\n    margin-right: 5px;\n}\n\nnav a:hover i\n{\n	animation: wobble 0.5s;\n	-webkit-animation: wobble 0.5s; /* Safari and Chrome */\n}\n\n\n@-webkit-keyframes wobble {\n    0% {\n        -webkit-transform: translateX(0);\n    }\n\n    15% {\n        -webkit-transform: translateX(-25%) rotate(-5deg);\n    }\n\n    30% {\n        -webkit-transform: translateX(20%) rotate(3deg);\n    }\n\n    45% {\n        -webkit-transform: translateX(-15%) rotate(-3deg);\n    }\n\n    60% {\n        -webkit-transform: translateX(10%) rotate(2deg);\n    }\n\n    75% {\n        -webkit-transform: translateX(-5%) rotate(-1deg);\n    }\n\n    100% {\n        -webkit-transform: translateX(0);\n    }\n}\n\n\n\n@keyframes wobble {\n    0% {\n        -webkit-transform: translateX(0);\n        -ms-transform: translateX(0);\n        transform: translateX(0);\n    }\n\n    15% {\n        -webkit-transform: translateX(-25%) rotate(-5deg);\n        -ms-transform: translateX(-25%) rotate(-5deg);\n        transform: translateX(-25%) rotate(-5deg);\n    }\n\n    30% {\n        -webkit-transform: translateX(20%) rotate(3deg);\n        -ms-transform: translateX(20%) rotate(3deg);\n        transform: translateX(20%) rotate(3deg);\n    }\n\n    45% {\n        -webkit-transform: translateX(-15%) rotate(-3deg);\n        -ms-transform: translateX(-15%) rotate(-3deg);\n        transform: translateX(-15%) rotate(-3deg);\n    }\n\n    60% {\n        -webkit-transform: translateX(10%) rotate(2deg);\n        -ms-transform: translateX(10%) rotate(2deg);\n        transform: translateX(10%) rotate(2deg);\n    }\n\n    75% {\n        -webkit-transform: translateX(-5%) rotate(-1deg);\n        -ms-transform: translateX(-5%) rotate(-1deg);\n        transform: translateX(-5%) rotate(-1deg);\n    }\n\n    100% {\n        -webkit-transform: translateX(0);\n        -ms-transform: translateX(0);\n        transform: translateX(0);\n    }\n}\n\n.animated.wobble {\n    -webkit-animation-name: wobble;\n    animation-name: wobble;\n}\n\n\n ",
+			"file": "css/default.css",
+			"file_size": 2822,
+			"file_write_time": 130341203100000000,
+			"settings":
+			{
+				"buffer_size": 2879,
 				"line_ending": "Unix"
 			}
 		},
@@ -75,7 +102,7 @@
 			"file": "_includes/navbar.html",
 			"settings":
 			{
-				"buffer_size": 883,
+				"buffer_size": 922,
 				"line_ending": "Unix"
 			}
 		},
@@ -83,7 +110,80 @@
 			"file": "_includes/footer.html",
 			"settings":
 			{
-				"buffer_size": 831,
+				"buffer_size": 856,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/bodytohtml.html",
+			"settings":
+			{
+				"buffer_size": 15,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/headdefault.html",
+			"settings":
+			{
+				"buffer_size": 472,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/headpost.html",
+			"settings":
+			{
+				"buffer_size": 44,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_layouts/post.html",
+			"settings":
+			{
+				"buffer_size": 2150,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/bootstrap.css",
+			"settings":
+			{
+				"buffer_size": 122848,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_posts/2013-12-14-test-menu.markdown",
+			"settings":
+			{
+				"buffer_size": 144,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/post.css",
+			"settings":
+			{
+				"buffer_size": 399,
+				"line_ending": "Unix",
+				"name": ".disqus_thread {"
+			}
+		},
+		{
+			"file": "_includes/headtobody.html",
+			"settings":
+			{
+				"buffer_size": 14,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_includes/htmltohead.html",
+			"settings":
+			{
+				"buffer_size": 33,
 				"line_ending": "Unix"
 			}
 		}
@@ -135,7 +235,7 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 46.0
 	},
 	"find_in_files":
 	{
@@ -149,6 +249,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"	\n",
+			"        ",
 			"text-align: right;",
 			"display"
 		],
@@ -168,7 +270,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -196,7 +298,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
@@ -224,7 +326,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
@@ -252,53 +354,110 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "css/default.css",
+					"file": "_layouts/default.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2818,
+						"buffer_size": 183,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								993,
-								993
+								0,
+								183
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "_layouts/defaultpost.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 210,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								78,
+								78
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "css/default.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2879,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								930,
+								931
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1119.0,
+						"translation.y": 775.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 6,
 					"file": "_includes/navbar.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 883,
+						"buffer_size": 922,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								544,
-								547
+								51,
+								51
 							]
 						],
 						"settings":
@@ -311,24 +470,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 7,
 					"file": "_includes/footer.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 831,
+						"buffer_size": 856,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								486,
-								486
+								856,
+								856
 							]
 						],
 						"settings":
@@ -339,7 +498,264 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "_includes/bodytohtml.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "_includes/headdefault.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 472,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								272,
+								321
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "_includes/headpost.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 44,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								38,
+								38
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "_layouts/post.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2150,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1213,
+								1213
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "css/bootstrap.css",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 122848,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "_posts/2013-12-14-test-menu.markdown",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 144,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								144,
+								144
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "css/post.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 399,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								259,
+								259
+							]
+						],
+						"settings":
+						{
+							"auto_name": ".disqus_thread {",
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "_includes/headtobody.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8,
+								8
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "_includes/htmltohead.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 33,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								33,
+								33
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
 					"type": "text"
 				}
 			]
@@ -417,7 +833,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 180.0,
+	"side_bar_width": 398.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
