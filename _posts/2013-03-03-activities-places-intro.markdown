@@ -3,7 +3,7 @@ layout: post
 title:  "GWT Activities and Places framework Introduction"
 date:   2013-03-03 20:19:00
 Tags: [Activity, Google Web Toolkit, GWT, History, Model, MVP, Place, Presenter, Token, URL, View]
-
+Categories: [gwt,activityplaces]
 ---
 
 Hello everyone,
@@ -19,12 +19,14 @@ For a lot of people, it is not clear wether or not the Activities and Places fra
 
 ###Classical MVC pattern
 
-!![mvc](/img/MVC.png)
+
+<img class="center" src="/img/MVC.png" alt="mvc" width="400px">
 
 
 ###MVP pattern 
 
-!![mvc](/img/MVP.png)
+
+<img class="center" src="/img/MVP.png" alt="mvp" width="300px">
 
 
 The difference is that the model and the view should not know each other.
@@ -35,7 +37,7 @@ This pattern makes it really simple to replace a view component (this can be rea
 
 Check out the Google I/O 2009 for more explanation on the topic (go to 21m30s)
 
-<iframe width="480" height="360" src="//www.youtube.com/embed/PDuhR18-EdM?t=21m29s" frameborder="0" allowfullscreen></iframe>
+<iframe class="center" width="480" height="360" src="//www.youtube.com/embed/PDuhR18-EdM?t=21m29s" frameborder="0" allowfullscreen></iframe>
 
 
 Other MVP implementations for GWT have been developed and released before Google released their own in GWT 2.2. Example gwtmvp. [http://www.gwtmpv.org/index.html](http://www.gwtmpv.org/index.html)
@@ -81,11 +83,11 @@ Then I entered the following url in my brower : http://127.0.0.1:8888/hellomvp.h
 
 Here is what happened
 
-!![mvc](/img/ActivityPlaceDiagram.png)
+<img class="center" src="/img/ActivityPlaceDiagram.png" alt="mvp" width="700px">
 
 A better version of the diagram focused on the second part
 
-!![mvc](/img/SimpleActivityPlaceDiagram.jpg)
+<img class="center" src="/img/SimpleActivityPlaceDiagram.jpg" alt="mvp" width="700px">
 
 Once the application is launched, the PlaceHistoryHandler get the url token from the Historian. Then the PlaceHistoryHandler calls the PlaceHistoryMapper to get the Place corresponding to the url token. To do so the PlaceHistoryMapper calls the PlaceTokenizer.
 

@@ -9,6 +9,10 @@
 	padding: 5px;
 	border-radius: 4px;
 	background-color: #FAFAFA;
+	width: 200px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .post-menu h2 {
@@ -16,16 +20,22 @@
 	margin: 0;
 	margin-bottom: 5px;
 	color: #BBBBBB;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 .post-menu h3 {
 	font-size: 1.3rem;
 	margin: 0;
 	margin-bottom: 5px;	
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 .post-menu li {
 	font-size: 1.3rem;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 .post {
@@ -39,4 +49,16 @@
 	border-radius: 4px;
 	font-size: 1.2rem;
 	margin-top: 2rem;
+}
+
+.center{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-bottom: 15px;
+}
+
+.right {
+	display: block;
+	float: left;
 }
