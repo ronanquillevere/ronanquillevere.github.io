@@ -1,9 +1,11 @@
+html {}
+
 body { 
-	position: relative;
-	padding-top: 50px;
-	margin: 0;
-	width: 100%;
+    position: relative;
+    padding-top: 50px;
 }
+
+
 
 #home-background {
 	background-color: #383838;
@@ -12,7 +14,7 @@ body {
 }
 
 #selfie {
-	float: left;
+	float: right;
 	/*transform:rotate(7deg);
 	-ms-transform:rotate(7deg);  IE 9 
 	-webkit-transform:rotate(7deg); /* Safari and Chrome */
@@ -24,10 +26,15 @@ body {
 	margin: 20px;
 }
 
+#introduction h1 {
+    display: inline;
+}
+
 #profiles {
 	margin-top: 20px;
+    margin-left: 20px;
 	line-height: 8rem;
-	/*text-align: right;*/
+	display: inline;
 }
 
 #profiles i {
@@ -36,28 +43,33 @@ body {
 }
 
 #profiles a {
-	/*display: block;*/
+	color:gray;
 }
 
-#profiles .fa-github {
+#profiles a:hover .fa-github {
 	color:black;
 }
 
-#profiles .fa-facebook-square {
+#profiles a:hover .fa-facebook-square {
 	color: #3B5998;
 }
 
-#profiles .fa-linkedin-square {
+#profiles a:hover .fa-linkedin-square {
 	color: #4875B4;
 }
 
-#profiles .fa-twitter {
+#profiles a:hover .fa-twitter {
 	color: #33CCFF;
+}
+
+#profiles a:hover .fa-envelope-o {
+    color: red;
 }
 
  #profiles a:hover .fa-github,
  #profiles a:hover .fa-facebook-square,
  #profiles a:hover .fa-linkedin-square,
+ #profiles a:hover .fa-envelope-o,
  #profiles a:hover .fa-twitter {
     animation: biggerLinkIcon 0.2s;
     -webkit-animation: biggerLinkIcon 0.2s;
@@ -93,6 +105,10 @@ nav a:hover i
 	-webkit-animation: wobble 0.5s; /* Safari and Chrome */
 }
 
+.navbar {
+    margin-bottom: 0;
+}
+
 .posts {
     margin: 20px;
 }
@@ -115,7 +131,10 @@ nav a:hover i
 }
 
 
-
-
-
- 
+.container {  
+    width: 800px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}

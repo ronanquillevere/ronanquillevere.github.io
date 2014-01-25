@@ -2,8 +2,12 @@
 {% include headdefault.html%}
 {% include headtobody.html%}
 {% include navbar.html%}
-{{ content }}
-{% include footer.html%}
+<div class="container">
+	<!-- <div id="content-centered"> -->
+	{{ content }}
+	{% include footer.html%}
+	<!-- </div> -->
+</div>
 {% include bodytohtml.html%}
 
 

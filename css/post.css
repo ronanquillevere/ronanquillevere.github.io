@@ -3,8 +3,9 @@
 }
 
 .post-menu {
-	float: right;
-	margin: 10px;
+/*	float: right;*/
+	
+
 	border: 1px solid #E4E4E4;
 	padding: 5px;
 	border-radius: 4px;
@@ -13,6 +14,10 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	position: fixed;
+	left: 10px;
+	top: 60px;
+
 }
 
 .post-menu h2 {
@@ -61,4 +66,9 @@
 .right {
 	display: block;
 	float: left;
+}
+
+.post-container {
+	width: 800px;
+	margin-left: 200px;
 }
