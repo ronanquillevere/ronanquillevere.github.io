@@ -139,7 +139,7 @@ nav a:hover i
     margin-left: auto;
 }
 
-iframe.infogram#companies {
+#chartcontainer {
     position: absolute;
     display: block;
     top: 218px;
