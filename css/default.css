@@ -139,7 +139,7 @@ nav a:hover i
     margin-left: auto;
 }
 
-.infogram #companies {
+.infogram#companies {
     position: absolute;
     display: block;
     top: 218px;
