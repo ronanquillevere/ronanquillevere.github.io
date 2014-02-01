@@ -14,12 +14,11 @@ body {
 }
 
 #selfie {
-	float: right;
-	/*transform:rotate(7deg);
-	-ms-transform:rotate(7deg);  IE 9 
-	-webkit-transform:rotate(7deg); /* Safari and Chrome */
-	width: 130px;
-	margin: 20px;
+    float: right;
+    width: 130px;
+    margin: 20px;
+    position: relative;
+    right: 0px;
 }
 
 #introduction {
@@ -87,6 +86,8 @@ body {
 	font-size: 0.9rem;
 	text-align: center;
 	color: rgb(185, 185, 185);
+    /*position: absolute;*/
+    /*bottom: 0;*/
 }
 
 nav a i {
@@ -139,6 +140,14 @@ nav a:hover i
     margin-left: auto;
 }
 
+#chart1 {
+    position: relative;
+    width: 300px;
+    height: 280px;
+    float: right;
+    top: -350px;
+    right: 0;
+}
 #chartcontainer {
     position: absolute;
     display: block;

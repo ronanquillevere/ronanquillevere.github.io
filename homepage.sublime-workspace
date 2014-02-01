@@ -4,12 +4,20 @@
 		"selected_items":
 		[
 			[
-				"s",
-				"small	Tag"
+				"h",
+				"h1	Tag"
 			],
 			[
 				"margin",
-				"margin-bottom"
+				"margin-left"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"s",
+				"small	Tag"
 			],
 			[
 				"pos",
@@ -51,7 +59,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 1043,
+				"buffer_size": 2770,
 				"line_ending": "Unix"
 			}
 		},
@@ -75,7 +83,7 @@
 			"file": "_layouts/default.html",
 			"settings":
 			{
-				"buffer_size": 183,
+				"buffer_size": 271,
 				"line_ending": "Unix"
 			}
 		},
@@ -83,7 +91,7 @@
 			"file": "_layouts/defaultpost.html",
 			"settings":
 			{
-				"buffer_size": 210,
+				"buffer_size": 256,
 				"line_ending": "Unix"
 			}
 		},
@@ -91,7 +99,23 @@
 			"file": "css/default.css",
 			"settings":
 			{
-				"buffer_size": 1646,
+				"buffer_size": 1972,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Volumes/Ronan/one2team/o3-client/src/com/one2team/client/bricklemedia/LiveGridComboBox.java",
+			"settings":
+			{
+				"buffer_size": 42640,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/main.css",
+			"settings":
+			{
+				"buffer_size": 2464,
 				"line_ending": "Unix"
 			}
 		},
@@ -131,7 +155,7 @@
 			"file": "_includes/footer.html",
 			"settings":
 			{
-				"buffer_size": 856,
+				"buffer_size": 896,
 				"line_ending": "Unix"
 			}
 		},
@@ -225,7 +249,7 @@
 			"file": "css/post.css",
 			"settings":
 			{
-				"buffer_size": 904,
+				"buffer_size": 997,
 				"line_ending": "Unix",
 				"name": ".disqus_thread {"
 			}
@@ -313,9 +337,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -323,6 +348,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"	\n",
+			"https",
+			"	\n",
+			"    border:;",
 			"highlight ",
 			"{% highlight ",
 			"margin-left: auto;\n	margin-right: auto;",
@@ -344,6 +373,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"http"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -354,7 +384,7 @@
 	"groups":
 	[
 		{
-			"selected": 13,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -363,15 +393,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1043,
+						"buffer_size": 2770,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								307,
-								307
+								636,
+								636
 							]
 						],
 						"settings":
@@ -379,10 +409,10 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 39.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 23,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -410,7 +440,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 24,
+					"stack_index": 26,
 					"type": "text"
 				},
 				{
@@ -438,7 +468,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -447,15 +477,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 183,
+						"buffer_size": 271,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								183
+								136,
+								113
 							]
 						],
 						"settings":
@@ -466,7 +496,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -475,15 +505,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 210,
+						"buffer_size": 256,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								78,
-								78
+								176,
+								176
 							]
 						],
 						"settings":
@@ -494,7 +524,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -503,15 +533,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1646,
+						"buffer_size": 1972,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								437,
-								437
+								1005,
+								1005
 							]
 						],
 						"settings":
@@ -521,14 +551,72 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 373.0,
+						"translation.y": 351.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
+					"file": "/Volumes/Ronan/one2team/o3-client/src/com/one2team/client/bricklemedia/LiveGridComboBox.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 42640,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12596,
+								12600
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 7785.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "css/main.css",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2464,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 674.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
 					"file": "css/animation.css",
 					"semi_transient": false,
 					"settings":
@@ -554,11 +642,11 @@
 						"translation.y": 579.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 25,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 9,
 					"file": "_includes/navbar.html",
 					"semi_transient": false,
 					"settings":
@@ -584,11 +672,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 10,
 					"file": "blog.html",
 					"semi_transient": false,
 					"settings":
@@ -614,11 +702,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 11,
 					"file": "_layouts/post.html",
 					"semi_transient": false,
 					"settings":
@@ -641,27 +729,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 356.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 12,
 					"file": "_includes/footer.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 856,
+						"buffer_size": 896,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								856,
-								856
+								475,
+								475
 							]
 						],
 						"settings":
@@ -672,11 +760,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 13,
 					"file": "_includes/bodytohtml.html",
 					"semi_transient": false,
 					"settings":
@@ -700,11 +788,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 22,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 14,
 					"file": "_posts/2013-03-03-activities-places-intro.markdown",
 					"semi_transient": false,
 					"settings":
@@ -729,11 +817,11 @@
 						"translation.y": 751.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 15,
 					"file": "_posts/2013-08-02-presenter-for-nesting.markdown",
 					"semi_transient": false,
 					"settings":
@@ -751,17 +839,19 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 40.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 16,
 					"file": "_posts/2012-08-06-chrome-dev-tools-right.markdown",
 					"semi_transient": false,
 					"settings":
@@ -785,11 +875,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 23,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 17,
 					"file": "_posts/2013-03-04-gwt-rest-jersey-server.markdown",
 					"semi_transient": false,
 					"settings":
@@ -816,11 +906,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 21,
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 18,
 					"file": "_posts/2013-08-23-google-io-gwt-videos.markdown",
 					"semi_transient": false,
 					"settings":
@@ -845,11 +935,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 19,
 					"file": "_posts/2013-12-28-not-nesting-activities.markdown",
 					"semi_transient": false,
 					"settings":
@@ -874,11 +964,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 20,
 					"file": "_posts/2013-03-04-gwt-rest-jersey-client.markdown",
 					"semi_transient": false,
 					"settings":
@@ -897,18 +987,18 @@
 						"settings":
 						{
 							"syntax": "Packages/Markdown/Markdown.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 22,
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 21,
 					"file": "_posts/2012-08-08-douglas-crockford-video.markdown",
 					"semi_transient": false,
 					"settings":
@@ -933,11 +1023,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 20,
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 22,
 					"file": "_posts/2012-12-12-javascript-object-comparison.markdown",
 					"semi_transient": false,
 					"settings":
@@ -962,24 +1052,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 23,
 					"file": "css/post.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 904,
+						"buffer_size": 997,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								386,
-								386
+								961,
+								961
 							]
 						],
 						"settings":
@@ -989,14 +1079,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 180.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 22,
+					"buffer": 24,
 					"file": "css/2012-08-06-Chrome-dev-tools-right.markdown",
 					"semi_transient": false,
 					"settings":
@@ -1021,11 +1111,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 24,
 					"type": "text"
 				},
 				{
-					"buffer": 23,
+					"buffer": 25,
 					"file": "_includes/headtobody.html",
 					"semi_transient": false,
 					"settings":
@@ -1049,11 +1139,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 21,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 24,
+					"buffer": 26,
 					"file": "_includes/htmltohead.html",
 					"semi_transient": false,
 					"settings":
@@ -1077,7 +1167,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 13,
 					"type": "text"
 				}
 			]
@@ -1121,7 +1211,7 @@
 	"project": "homepage.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 86.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1155,7 +1245,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 362.0,
+	"side_bar_width": 242.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

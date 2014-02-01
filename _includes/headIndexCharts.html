@@ -1,0 +1,50 @@
+<script type="text/javascript">
+   $(function () {
+        $('#chart1').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: null
+            },
+            legend : {
+                enabled:false
+            },
+            credits: {
+                enabled:false
+            },
+            xAxis: {
+                categories: [
+                    'Amadeus',
+                    'Dassault Systemes',
+                    'One2team',
+                    'MYCOM',
+                ]
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: null
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr>'+
+                    '<td style="padding:0"><b>{point.y:.1f} Years</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                    data: [{y:2, color: '#a5c0fd'}, {y:3, color: '#6392fc'}, {y:2, color: '#2a6afd'}, {y:1, color: '#004cfa'}]
+    
+            }]
+        });
+    });
+</script>
