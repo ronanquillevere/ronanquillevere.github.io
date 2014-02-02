@@ -82,14 +82,14 @@
 
 @-webkit-keyframes biggerLinkIcon {
     100% {
-        font-size: 4.3rem;
+        font-size: 3.5rem;
     }
 }
 
 
 @keyframes biggerLinkIcon {
     100% {
-        font-size: 4.3rem;
+        font-size: 3.5rem;
     }
 }
 
