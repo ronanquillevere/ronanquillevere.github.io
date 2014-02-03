@@ -78,6 +78,8 @@ public class JSMCredits extends JSMBaseObject implements Credits {
 
 # What is coming ? Winter ?
 
+<iframe width="640" height="360" src="//www.youtube.com/embed/wFMD1GXR2Tg" frameborder="0" allowfullscreen></iframe>
+
 #### @JsInterface and @JsProperty
 
 No need to implement JSO anymore !
