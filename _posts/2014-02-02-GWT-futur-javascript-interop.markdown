@@ -204,7 +204,9 @@ class MyJavaObject implements MyJsInterface {
 
 # How does it work ?
 
-I guess they will use some kind of GWT generator that reads the annotations and that will generate the JSO object at compile time. Example of generators : [restyGWT](https://github.com/chirino/resty-gwt), [GWT-Exporter](https://code.google.com/p/gwt-exporter/)
+As Arnaud Tournier mentionned in the comments below, this javascript code generation process is integrated to the GWT compiler.
+
+I think part of this work was inspired by the GWT generator [GWT-Exporter](https://code.google.com/p/gwt-exporter/) written by Ray Cromwell and others. I think it is a good entry point if you want to understand better how this javscript code generation can work. If you want another example of generator you can have a look to [restyGWT](https://github.com/chirino/resty-gwt), 
 
 I wonder if there will be an impact on compilation time if there are lots of JSO involved ?
 
