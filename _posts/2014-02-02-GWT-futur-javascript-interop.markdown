@@ -204,7 +204,7 @@ class MyJavaObject implements MyJsInterface {
 
 # How does it work ?
 
-As Arnaud Tournier mentionned in the comments below, this javascript code generation process is integrated to the GWT compiler.
+As [Arnaud Tournier](http://www.devoxx.com/display/FR13/Arnaud+Tournier) mentionned in the comments below, this javascript code generation process is integrated to the GWT compiler. If you want to have a look at the code check this code review [https://gwt-review.googlesource.com/#/c/5567/](https://gwt-review.googlesource.com/#/c/5567/)
 
 I think part of this work was inspired by the GWT generator [GWT-Exporter](https://code.google.com/p/gwt-exporter/) written by Ray Cromwell and others. I think it is a good entry point if you want to understand better how this javscript code generation can work. If you want another example of generator you can have a look to [restyGWT](https://github.com/chirino/resty-gwt), 
 
