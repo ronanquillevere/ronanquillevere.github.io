@@ -63,7 +63,7 @@
 			"file": "_posts/2014-02-02-GWT-futur-javascript-interop.markdown",
 			"settings":
 			{
-				"buffer_size": 10455,
+				"buffer_size": 10701,
 				"line_ending": "Unix"
 			}
 		}
@@ -202,15 +202,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10455,
+						"buffer_size": 10701,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5484,
-								5484
+								9659,
+								9659
 							]
 						],
 						"settings":
@@ -220,7 +220,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1255.0,
+						"translation.y": 3281.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
