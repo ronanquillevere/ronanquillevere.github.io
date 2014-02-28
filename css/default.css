@@ -86,6 +86,12 @@ body {
     animation-fill-mode:forwards;
 }
 
+.fa.fa-youtube.red {
+    color: red;
+    font-size: 3rem;
+}
+
+
 #expertise {
 }
 
