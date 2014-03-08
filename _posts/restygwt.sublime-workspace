@@ -59,14 +59,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "_posts/2014-02-02-GWT-futur-javascript-interop.markdown",
-			"settings":
-			{
-				"buffer_size": 10912,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -193,39 +185,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "_posts/2014-02-02-GWT-futur-javascript-interop.markdown",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10912,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3131.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -264,7 +225,7 @@
 	{
 		"height": 0.0
 	},
-	"project": "homepage.sublime-project",
+	"project": "restygwt.sublime-project",
 	"replace":
 	{
 		"height": 64.0
