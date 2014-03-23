@@ -6,6 +6,8 @@ Tags: [generator, Google Web Toolkit, GWT, JAX-RS, REST, Restful, restyGWT, serv
 Categories: [gwt]
 ---
 
+<div class="bs-callout bs-callout-warning">I have written a new article with all the needed info for Jersey 2.7, you probably should have a look <a href="/2014/03/16/gwt-rest-app.html">here</a></div>
+
 This article is part 2 of a previous post, see part1 [GWT and Rest : Part 1 - Server Side (Jersey JAX-RS)](/2013/03/24/gwt-rest-jersey-server.html) for the server side information. I know it has taken me a long time to write this part. I am really sorry if you were waiting.
 
 This part will be focused on the [GWT](http://www.gwtproject.org/)  client part, using [RestyGWT](http://restygwt.fusesource.org/index.html)

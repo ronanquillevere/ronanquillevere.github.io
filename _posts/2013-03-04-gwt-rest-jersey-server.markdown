@@ -6,6 +6,9 @@ Tags: [Google Web Toolkit, GWT, JAX-RS, Jersey, REST, Restful, restyGWT, service
 Categories: [gwt]
 ---
 
+<div class="bs-callout bs-callout-warning">I have written a new article with all the needed info for Jersey 2.7, you probably should have a look <a href="/2014/03/16/gwt-rest-app.html">here</a></div>
+
+
 Hello everyone,
 
 In this article I will talk about  [REST](http://en.wikipedia.org/wiki/Representational_state_transfer) and how to create a REST application using GWT (and  [RestyGWT](http://restygwt.fusesource.org/)) for the client and  [JAX-RS](http://en.wikipedia.org/wiki/Java_API_for_RESTful_Web_Services) (with  [Jersey](http://jersey.java.net/)) for the server.

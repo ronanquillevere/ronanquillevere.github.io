@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Building a GWT REST application (with RestyGWT and Jersey)"
+title:  "Building a GWT REST application with RestyGWT and Jersey 2.7"
 date:   2014-03-16 23:59:00
 Tags: [GWT, REST, JAX-RS, RestyGWT,Google Web Toolkit]
 Categories: [gwt]
@@ -19,10 +19,10 @@ To run the project:
 
 # Prerequisite
 
-* Maven 
-* Eclipse
-* Eclipse maven plugin
-* Eclipse google plugin
+* [Maven](http://maven.apache.org/)
+* [Eclipse](https://www.eclipse.org/)
+* [Eclipse maven plugin](https://www.eclipse.org/m2e/)
+* [Eclipse google plugin](https://developers.google.com/eclipse/)
 
 # Setup a GWT maven project in eclipse
 
@@ -169,7 +169,7 @@ First we will need to add the dependency on JAX-RS API.
 </dependency>
 {% endhighlight%}
 
-Then we need Jersey in our pom (The JAX-RS implementation). As of today, the latest version of Jersey is 2.7. As we are going to use an old version of Jetty, it does not implement the servlet 3.0 API so the dependency looks like this.
+Then we need [Jersey](https://jersey.java.net/) in our pom (The JAX-RS implementation). As of today, the latest version of Jersey is 2.7. As we are going to use an old version of Jetty, it does not implement the servlet 3.0 API so the dependency looks like this.
 {% highlight xml%}
 <dependency>
     <groupId>org.glassfish.jersey.containers</groupId>
@@ -179,7 +179,7 @@ Then we need Jersey in our pom (The JAX-RS implementation). As of today, the lat
 </dependency>
 {% endhighlight%}
 
-For our json processing we want to use Jackson so we also add the following dependency
+For our json processing we want to use [Jackson](https://github.com/FasterXML/jackson) so we also add the following dependency
 {% highlight xml%}
 <dependency>
     <groupId>org.glassfish.jersey.media</groupId>
