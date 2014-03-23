@@ -12,10 +12,10 @@ In this post I will show you step by step how to build a GWT REST application us
 
 The following code can be found here [https://github.com/ronanquillevere/gwtrestapp](https://github.com/ronanquillevere/gwtrestapp)
 
-To run the project
+To run the project: 
 
-  mvn clean install
-  mvn gwt:run
+    mvn clean install
+    mvn gwt:run
 
 # Prerequisite
 
