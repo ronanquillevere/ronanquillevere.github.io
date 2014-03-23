@@ -10,7 +10,7 @@ Hi everyone,
 
 In this post I will show you step by step how to build a GWT REST application using RestyGWT and Jersey.
 
-The following code can be found here [https://github.com/ronanquillevere/gwtrestapp](https://github.com/ronanquillevere/gwtrestapp)
+The following code can be found on github <i class="fa fa-github" style="font-size:2rem"></i> [https://github.com/ronanquillevere/gwtrestapp](https://github.com/ronanquillevere/gwtrestapp)
 
 To run the project: 
 
