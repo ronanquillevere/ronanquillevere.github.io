@@ -14,8 +14,8 @@ The following code can be found here [https://github.com/ronanquillevere/gwtrest
 
 To run the project
 
-   mvn clean install
-   mvn gwt:run
+  mvn clean install
+  mvn gwt:run
 
 # Prerequisite
 
