@@ -54,7 +54,7 @@ and the following errors
 
 <img class="center" src="/img/gwtrestapp/maven5.png" alt="mvc" width="700px">
 
-### Clean the maven project
+#### Clean the maven project
 
 We will not need the code that has been automatically generated so just keep your entrypoint and erase all the other classes. 
 
@@ -71,7 +71,7 @@ public class gwtrestapp implements EntryPoint {
 }
 {% endhighlight%}
 
-### Get rid of the errors
+#### Get rid of the errors
 
 I hate errors, especialy in eclipse where I only want to see compile errors, so we will get rid of them. At this point you should only have one error. This error is due to the fact that the m2e maven eclipse plugin does not support all the plugin execution that are supported in maven. It is not a big deal. Just use quick fix ! Mark the goal as ignored for m2e inside eclipse.
 
@@ -337,7 +337,7 @@ Add RestyGWT dependency in your pom.
 {% endhighlight%}
 
 
-### GWT module file config
+#### GWT module file config
 
 Add RestyGWT to you GWT module file 
 
@@ -345,7 +345,7 @@ Add RestyGWT to you GWT module file
 <inherits name="org.fusesource.restygwt.RestyGWT"/>
 {% endhighlight%}
 
-### Implement your client
+#### Implement your client
 
 We are going to define a rest interface so that RestyGWT will be able to generate the client code 
 
