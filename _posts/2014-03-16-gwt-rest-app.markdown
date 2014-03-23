@@ -225,6 +225,7 @@ This resource returns some Hello object.
 package org.usesoft.gwtrestapp.server.interfaces.api;
 
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Map;
 
 import javax.ws.rs.GET;
@@ -232,9 +233,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-import org.usesoft.gwtrestapp.server.domain.Hello;
-
-import com.google.gwt.dev.util.collect.HashMap;
+import org.usesoft.gwtrestapp.shared.domain.Hello;
 
 @Path("hellos")
 public class HelloResource {
