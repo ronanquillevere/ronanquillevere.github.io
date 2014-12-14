@@ -59,22 +59,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "_posts/2014-04-11-restygwt-basic-auth.markdown",
-			"settings":
-			{
-				"buffer_size": 6361,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_posts/2014-03-16-gwt-rest-app.markdown",
-			"settings":
-			{
-				"buffer_size": 13947,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -103,6 +87,7 @@
 	},
 	"file_history":
 	[
+		"/Users/ronan/GitHub/ronanquillevere.github.io/_posts/2014-07-28-gin-debug-tips.markdown",
 		"/Users/ronan/GitHub/ronanquillevere.github.io/_includes/headdefault.html",
 		"/Users/ronan/GitHub/ronanquillevere.github.io/_posts/2013-03-04-gwt-rest-jersey-server.markdown",
 		"/Users/ronan/GitHub/ronanquillevere.github.io/_layouts/post.html",
@@ -216,68 +201,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "_posts/2014-04-11-restygwt-basic-auth.markdown",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6361,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6359,
-								6359
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1976.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "_posts/2014-03-16-gwt-rest-app.markdown",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 13947,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4986,
-								4967
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1931.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],
