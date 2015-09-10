@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Minifying an angular app" 
-date:   2015-08-04 23:59:00
+date:   2015-09-10 23:59:00
 Tags: [angularjs, minify]
 Categories: [angularjs]
 ---
@@ -17,14 +17,13 @@ This is something you will probably have to look at by the end of your project :
 
 To do so I have used the [minify-maven-plugin](https://github.com/samaxes/minify-maven-plugin). 
 
-In my project I had to run this plugin after the [sass compilation](https://github.com/darrinholst/sass-java/tree/master/sass-java-maven) (need the css file to be there to compact them !)
+In my project I had to run this plugin after the [sass compilation](https://github.com/darrinholst/sass-java/tree/master/sass-java-maven) (need the css files to be there to compact them !)
 
 Under the hood it uses 2 things :
 - [YUI Compressor](http://yui.github.io/yuicompressor/)
 - [Google Closure Compiler](https://developers.google.com/closure/compiler/?hl=en)
 
-After executing the plugin I end up with a file called app.min.js and style.min.css
-
+After executing the plugin I end up with a file called `app.min.js` and `style.min.css` that each contain all the js minified and all the css minified !
 
 #Angular impact
 
@@ -40,7 +39,7 @@ phonecatApp.controller('PhoneListCtrl', ['$scope', '$http', function($scope, $ht
 
 #HTML pages
 
-In order to use them I had to change the index.html page of our application to reference those new files. Problem is that those 2 files are generated inside the `target/APPNAME-VERSION` directory. Thus they are not usable when using `mvn tomcat:run`. I could have done some ugly hacks in the pom to copy those file in the src directory (that is used by tomcat when running `mvn tomcat:run`) but this is really too ugly.
+In order to use `app.min.js` and `style.min.css` I had to change the index.html page of our application to reference those new files. Problem is that those 2 files are generated inside the `target/APPNAME-VERSION` directory. Thus they are not usable when using `mvn tomcat:run`. I could have done some ugly hacks in the pom to copy those file in the src directory (that is used by tomcat when running `mvn tomcat:run`) but this is really too ugly.
 
 The solution I came up with is simply to have 2 index pages 
 one page for production : `index.html`
@@ -141,4 +140,8 @@ Here is an extract of my pom.xml
   </plugin>
 
 {% endhighlight %}
+
+Hope it will help you !
+
+
 
