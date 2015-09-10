@@ -77,7 +77,7 @@ Indexdev.html
 <!-- *** Debug css *** -->
 <link rel="stylesheet" href="assets/css/mycss1.css">
 <link rel="stylesheet" href="assets/css/mycss2.css">
-<link rel="stylesheet" href="assets/css/mo-bootstrap.css">
+<link rel="stylesheet" href="assets/css/modified-bootstrap.css">
 
 
 <!-- Js dependencies -->
