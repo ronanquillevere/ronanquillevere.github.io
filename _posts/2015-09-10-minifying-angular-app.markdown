@@ -21,8 +21,8 @@ In my project I had to run this plugin after the [sass compilation](https://gith
 
 Under the hood it uses 2 things :
 
-    * [YUI Compressor](http://yui.github.io/yuicompressor/)
-    * [Google Closure Compiler](https://developers.google.com/closure/compiler/?hl=en)
+* [YUI Compressor](http://yui.github.io/yuicompressor/)
+* [Google Closure Compiler](https://developers.google.com/closure/compiler/?hl=en)
 
 After executing the plugin I end up with a file called `app.min.js` and `style.min.css` that each contain all the js minified and all the css minified !
 
