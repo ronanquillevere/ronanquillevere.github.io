@@ -32,7 +32,7 @@ During the scanning phase JQAssistant is able to flag your files with some label
 
 JQAssistant can be used inside maven (hopefully for the poor JAVA developers we are). Here is an extract of my pom.xml
 
-Then important thing to note are the groups. Inside each group, you will be able to define certain rules to be tested on your scanned files.
+The important thing to note is the groups. Inside each group, you will be able to define certain rules to be tested on your scanned files.
 
 {% highlight xml %}
 <plugin>
@@ -81,7 +81,7 @@ We create the other concepts for the application, domain and infrastructure laye
 
 Constraints are the rules that will be tested on your files (nodes).
 
-Again it is quite easy. Here is the constraint that checks if some classes inside the interfaces layer (flagged as DDD_Interfaces thanks to our previous concept) depends on classes inside the domain layer. If we find some, it means our ddd structure has been violated. Because we set the flag `failOnViolations` to true inside our `pom.xml` the maven phase will fail and your maven build will fail as well.
+Again it is quite easy. Here is the constraint that checks if some classes inside the interfaces layer (flagged as DDD_Interfaces thanks to our previous concept) depends on classes inside the domain layer. If we find some, it means our ddd structure has been violated. Because we set the flag `failOnViolations` to true inside our `pom.xml` the maven goal will fail and your maven build will fail as well.
 
 {% highlight xml %}
 <constraint id="ddd:TestInterfacesDomain" severity="blocker">
