@@ -17,7 +17,7 @@ In the following article I will show you how to do that using [JQAssistant](http
 
 Typicaly if you are using DDD you have defined layers inside your backend code. Those layers can vary a little bit between intrepretation of the DDD concept, as dependencies between layers.
 
-In my case here are the layers of my application backend. Arrows represent authorized dependencies between layers. For example Interfaces depend on application. It means you can use application object inside an object of the interfaces layer.
+In my case here are the layers of my application backend. Arrows represent authorized dependencies between layers. For example Interfaces depend on application. It means you can use application objects inside an object of the interfaces layer.
 
 <img class="center" src="/img/dddlayers.jpg" alt="ddd layers" width="400px">
 
@@ -26,13 +26,13 @@ In my case here are the layers of my application backend. Arrows represent autho
 
 JQAssistant typical flow is composed of 2 steps : scanning and analysing. 
 
-During the scanning phase JQAssistant is able to flag your files some labels. It uses [Neo4j](http://www.neo4j.com) as the underlying database to save those information. Neo4j is a graph database. So each of your file is in fact seen as a Node in the Neo4j database. It is also able to create relationships between those nodes. Typically JQAssistant is able to scan your classes files and create vdependency relationships between them. This is the relationship we will use to ensure our DDD structure.
+During the scanning phase JQAssistant is able to flag your files with some labels. It uses [Neo4j](http://www.neo4j.com) as the underlying database to save those information. Neo4j is a graph database. So each of your file is in fact seen as a Node in the Neo4j database. It is also able to create relationships between those nodes. Typically JQAssistant is able to scan your classes files and create dependency relationships between them. This is the relationship we will use to validate our DDD structure.
 
 ## pom.xml
 
 JQAssistant can be used inside maven (hopefully for the poor JAVA developers we are). Here is an extract of my pom.xml
 
-Important thig to notes are the groups. Inside each group, you will be able to define certain rules to be tested on your scanned files.
+Then important thing to note are the groups. Inside each group, you will be able to define certain rules to be tested on your scanned files.
 
 {% highlight xml %}
 <plugin>
@@ -60,7 +60,7 @@ Important thig to notes are the groups. Inside each group, you will be able to d
 
 ### rules.xml
 
-Now is the time to define our rules ! They should be definde inside an xml file inside the JQAssistant directory that should be located under your app directory (next to your pom.xml).
+Now is the time to define our rules. They should be defined inside an xml file inside the JQAssistant directory that should be located under your app directory (next to your pom.xml).
 
 ### DDD concepts
 
@@ -287,4 +287,4 @@ It is probably possible to use only one constraint to test everything. But I had
 {% endhighlight %}
 
 
- Hope it will help !
+Hope it will help !
