@@ -29,6 +29,23 @@ public static void main(String[] args) throws NoSuchAlgorithmException, IOExcept
 }
 {% endhighlight %}
 
+ou can add dependency on certain commands : example
+
+{% highlight java %}
+builder.addDependencyMore("tar", "0");
+builder.addDependencyMore("python", "0");
+builder.addDependencyMore("wget", "0");
+{% endhighlight %}
+
+Then you can add some pre-install script or post-install script and files too.
+
+{% highlight java %}
+builder.setPostInstallScript(xxx);
+
+File tarball = new File("/the/dir/of/your/file/file.tar.gz");
+builder.addFile("/where/to/put/it/file.tar.gz", tarball);
+{% endhighlight %}
+
 #pom.xml
 
 Specify jar for packaging. Then add the dependencies. In your pom you will need redline, slf4j and a logger.
