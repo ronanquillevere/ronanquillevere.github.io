@@ -29,7 +29,7 @@ public static void main(String[] args) throws NoSuchAlgorithmException, IOExcept
 }
 {% endhighlight %}
 
-ou can add dependency on certain commands : example
+You can add dependency on certain commands : example
 
 {% highlight java %}
 builder.addDependencyMore("tar", "0");
@@ -37,7 +37,7 @@ builder.addDependencyMore("python", "0");
 builder.addDependencyMore("wget", "0");
 {% endhighlight %}
 
-Then you can add some pre-install script or post-install script and files too.
+You can also add some pre-install script or post-install script and files too.
 
 {% highlight java %}
 builder.setPostInstallScript(xxx);
