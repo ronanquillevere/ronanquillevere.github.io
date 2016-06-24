@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Blockchain & bitcoin introduction" 
-date:   2016-06-24 23:59:00
+date:   2016-06-23 23:59:00
 Tags: [blockchain, bitcoin]
 Categories: [security, database, distributed, peer2peer]
 ---
@@ -12,6 +12,7 @@ This article is intended to be an introduction to the blockchain technology, usi
 ## Is a database
 A `blockchain` is a way to store data. It can be compared to a new type of database. It is composed of `blocks` that are `chained` togethers thus forming a `block-chain`. Each `block` is linked to the previous block of the chain. A block contains data or even programs in some recent implementations. 
 
+<img class="center" src="http://ronanquillevere.github.io/img/blockchain1.png" alt="blockchain" width="600px">
 
 The blockchain was the technological innovation behind the first decentralized digital currency, the `bitcoin`. Nevertheless other types of blockchains have been created since which are not targeted to be digital currencies. The real revolution of the blockchain is the promise of reducing the cost of establishing and maintaining trust for both individuals and organizations. This trust is enforced by various mechanisms that we will detail below. 
 
@@ -29,6 +30,8 @@ We need to remember that the blockchain, that was introduced by the bitcoin curr
 Basically the goal is to remove the trusted third party needed in electronic transactions. One of the problem with trusted third parties is that they respresent a `single point of failure`. Thus the bitcoin blockchain was designed to be distributed. In fact, each node composing the bitcoin network contains a copy of the entire blockchain. Because each block contains a list of transactions, the bitcoin blockchain is also refered as a `public ledger`. No central party has ownership of the ledger, therefore no one can individually amend the entries already on the blockchain.
 
 When new transactions arrives they need to be verified, meaning if an account A has a balance of +10 coins, the owner of account A should not be able to spend more than those 10 coins. This problem is also known as the `double-spending` problem, where one could use one digital token/coin twice. This problem cannot happen in real life, with real coins, unless you are a good magician. This verification is also distributed. It is not the responsibility of someone in particular to verify the transactions. Instead, all nodes validate the transaction independently. This is possible because the blockchain is known by everyone, so anyone can go back in the past and recompute the balance of an account.
+
+<img class="center" src="http://ronanquillevere.github.io/img/blockchain-bitcoin.png" alt="blockchain" width="800px">
 
 ## Uses cryptography
 Distributing the blockchain would not be enough to make the system safe. Users making transactions should stay anonymous. A user may not want anyone to know that he has concluded a transaction with some other user. Also someone should not be able to steal your identity and use your bitcoins to buy something. That is why each transaction must be digitaly signed.
