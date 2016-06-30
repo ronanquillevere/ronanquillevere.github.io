@@ -7,7 +7,7 @@ Categories: [security, database, distributed, peer2peer]
 ---
 
 # The Blockchain (block-chain)
-This article is intended to be an introduction to the blockchain technology that was introduced with the Bitcoin currency. I will try to keep a technological approach rather than a financial/ethical one. You will not find any discussion about how to buy/ manage Bitcoins or my personal opinion on whether you should invest in that currency.  
+This article is intended to be an introduction to the blockchain technology that was introduced with the Bitcoin currency. Some details I believe are not important will be deliberately omitted to ease the understanding of this article. I will try to keep a technological approach rather than a financial/ethical one. You will not find any discussion about how to buy/ manage Bitcoins or my personal opinion on whether you should invest in that currency.  
 
 ## Is a database
 A `blockchain` is a way to store data. It can be compared to a new type of database. It is composed of `blocks` that are `chained` together thus forming a `block-chain`. Each `block` is linked to the previous block of the chain. A block contains data or even programs in some recent implementations.
@@ -117,8 +117,6 @@ The steps to run the network are as follows:
 4. When a node finds a proof-of-work, it broadcasts the block to all nodes.
 5. Nodes accept the block only if all transactions in it are valid and not already spent.
 6. Nodes express their acceptance of the block by working on creating the next block in the chain, using the hash of the accepted block as the previous hash.
-
-
 
 
 
