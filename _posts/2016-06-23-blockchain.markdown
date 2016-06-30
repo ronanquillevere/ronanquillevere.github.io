@@ -89,6 +89,24 @@ If you go deeper into that subject you will see that for the Bitcoin, the target
 
 Lastly, the bitcoin network, for reasons of stability and low latency in transactions, will adjust dynamically the difficulty so that a block is found in average every 10 minutes. This enables transactions on the network to be validated in an acceptable delay. The adjustment mechanism is based on the time taken to compute the previous 2016 blocks. In the long run, the tendency is to raising the difficulty in order to compensate the increase of computation power of mining pools. 
 
+## Is not completly secured !
+
+The distribution has its drawbacks. The most famous is called the 51% attack. If one organization or one country was able to gain control of more than 51% of the network nodes then it will be in position to
+
+- prevent transactions of their choosing from gaining any confirmations, thus making them invalid, potentially preventing people from sending Bitcoins between addresses
+- reverse transactions they send during the time they are in control (allowing double spending) 
+- prevent other miners from finding any blocks for a short period of time
+
+But it could not
+
+- Reverse other people's transactions
+- Prevent transactions from being sent at all (they'll show as 0/unconfirmed)
+- Change the number of coins generated per block
+- Create coins out of thin air
+- Send coins that never belonged to him
+
+Since this attack doesn't permit all that much power over the network, it is expected that no one will attempt it. A profit-seeking person will always gain more by just following the rules, and even someone trying to destroy the system will probably find other attacks more attractive. However, if this attack is successfully executed, it will be difficult or impossible to "untangle" the mess created, any changes the attacker makes might become permanent.
+
 ## Summary
 
 The steps to run the network are as follows:
@@ -100,7 +118,9 @@ The steps to run the network are as follows:
 5. Nodes accept the block only if all transactions in it are valid and not already spent.
 6. Nodes express their acceptance of the block by working on creating the next block in the chain, using the hash of the accepted block as the previous hash.
 
-## Security
+
+
+
 
 # Bibliography
 * [Bitcoin: A Peer-to-Peer Electronic Cash System](https://Bitcoin.org/Bitcoin.pdf)
