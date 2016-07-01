@@ -29,9 +29,11 @@ We need to remember that the blockchain, which was introduced with the Bitcoin c
 
 Basically the goal is to remove the trusted third party needed in electronic transactions. One of the problem with trusted third parties is that they represent a `single point of failure`. Thus the Bitcoin blockchain was designed to be distributed. In fact, each node composing the Bitcoin network contains a copy of the entire blockchain. Because each block contains a list of transactions, the Bitcoin blockchain is also referred as a `public ledger`. No central party has ownership of the ledger, therefore no one can individually amend the entries already on the blockchain.
 
+<img class="center" src="/img/nodes.png" alt="nodes" width="400px">
+
 When new transactions arrives they need to be verified, meaning if an account A has a balance of +10 coins, the owner of account A should not be able to spend more than those 10 coins. This problem is also known as the `double-spending` problem, where one could use one digital token/coin twice. This problem cannot happen in real life, with real coins, unless you are a good magician. This verification is also distributed. It is not the responsibility of someone in particular to verify the transactions. Instead, all nodes validate the transaction independently. This is possible because the blockchain is known by everyone and because transactions are not encrypted, so anyone can go back in the past and re-compute the balance of an account.
 
-<img class="center" src="http://ronanquillevere.github.io/img/blockchain-bitcoin.png" alt="blockchain-bitcoin" width="800px">
+<img class="center" src="/img/blockchain-bitcoin.png" alt="blockchain-bitcoin" width="800px">
 
 ## Uses address pseudonyms and digital signatures
 
@@ -43,13 +45,20 @@ Here is an example of an address.
 
 Also someone should not be able to steal your identity and use your Bitcoins to buy something. That is why each transaction must be digitally signed. The owner of a Bitcoin address has the private key associated with the address. To spend Bitcoins, he must sign his transaction with his private key, which proves he is the owner. The public key associated with each Bitcoin address is public, so anyone can verify the digital signature of the transaction.
 
+<img class="center" src="/img/adress.png" alt="adress" width="600px">
 
 ## Relies on miners
 Transactions are stored inside blocks. But blocks are not free to create and require a `proof-of-work`. A proof-of-work (POW) system (or protocol, or function) is an economic measure originally designed to deter denial of service attacks and other service abuses such as spam on a network by requiring some work from the service requester, usually meaning processing time by a computer. Bitcoin uses the [Hashcash](https://en.Bitcoin.it/wiki/Hashcash) proof of work system.
 
 The good analogy here is to compare a block to a gold nugget. Finding one requires a lot of efforts thus one should be rewarded for finding it. Once found, the new gold nugget is added to the total amount of gold in circulation. That is why people "finding" blocks are called `miners`. Note that the Bitcoin block mining reward halves every 210,000 blocks. The coin reward will decrease from 25 (16.000 us dollar) to 12.5 coins around the 9th of July 2016.
 
-For a block to be valid it must hash to a value less than the current `target`. The target is a 256-bit number (extremely large) that all Bitcoin clients share. The `SHA-256` hash of a block's header must be lower than or equal to the current target for the block to be accepted by the network. The lower the target, the more difficult it is to generate a block. Each block contains the hash of the preceding block, thus each block has a chain of blocks that together contain a large amount of work. Changing a block (which can only be done by making a new block containing the same predecessor) requires regenerating all successors and redoing the work they contain. This protects the block chain from tampering. 
+<img class="center" src="/img/miner.png" alt="miner" width="300px">
+
+A `hash` is a function that takes an input (usually a string) and return a number. For a block to be valid, it must hash its content (the list of transactions) to a value less than a certain number called the `target`. 
+
+<img class="center" src="/img/hash.png" alt="hash" width="400px">
+
+The target is a 256-bit number (extremely large) that all Bitcoin clients share. The `SHA-256` hash of a block's header must be lower than or equal to the current target for the block to be accepted by the network. The lower the target, the more difficult it is to generate a block. Each block contains the hash of the preceding block, thus each block has a chain of blocks that together contain a large amount of work. Changing a block (which can only be done by making a new block containing the same predecessor) requires regenerating all successors and redoing the work they contain. This protects the block chain from tampering. 
 
 ### Who are hard workers
 
