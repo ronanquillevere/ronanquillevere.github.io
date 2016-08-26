@@ -59,15 +59,103 @@
 	},
 	"buffers":
 	[
+		{
+			"contents": "<?xml version=\"1.0\"?>\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd\">\n  <modelVersion>4.0.0</modelVersion>\n  <artifactId>nims</artifactId>\n  <packaging>jar</packaging>\n  <url>http://mycom-int.com</url>\n  <parent>\n    <groupId>com.mycom.kernel</groupId>\n    <artifactId>legacy-parent</artifactId>\n    <version>4.2.2-SNAPSHOT</version>\n    <relativePath />\n  </parent>\n  <version>4.2-SNAPSHOT</version>\n  <properties>\n    <ant.rules.dir>${project.basedir}/src/main/ant</ant.rules.dir>\n    <nims.api.javadoc.dir>${project.build.directory}/javadoc-nims-api</nims.api.javadoc.dir>\n    <it.skip>true</it.skip>\n    <perforce.root.dir>${perforce.kernel.basedir}</perforce.root.dir>\n    <powermock.version>1.5.6</powermock.version>\n  </properties>\n  <dependencies>\n    <dependency>\n      <groupId>com.oracle</groupId>\n      <artifactId>javafx</artifactId>\n      <version>2.2</version>\n      <scope>system</scope>\n      <systemPath>${java.home}/lib/jfxrt.jar</systemPath>\n    </dependency>\n    <dependency>\n      <groupId>log4j</groupId>\n      <artifactId>log4j</artifactId>\n      <version>${log4j.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>commons-logging</groupId>\n      <artifactId>commons-logging</artifactId>\n      <version>${commons-logging.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>commons-lang</groupId>\n      <artifactId>commons-lang</artifactId>\n      <version>${commons-lang.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>org.jdom</groupId>\n      <artifactId>jdom</artifactId>\n      <version>${jdom.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>joda-time</groupId>\n      <artifactId>joda-time</artifactId>\n      <version>${joda-time.version}</version>\n    </dependency>\n    <!-- Joram: for Alarm module -->\n    <dependency>\n      <groupId>org.objectweb.joram</groupId>\n      <artifactId>joram-client-jms</artifactId>\n      <version>${joram.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>com.mycom.hosted</groupId>\n      <artifactId>castor</artifactId>\n      <version>${castor.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>com.mycom.hosted</groupId>\n      <artifactId>jcchart</artifactId>\n      <version>${jcchart.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>com.mycom.hosted</groupId>\n      <artifactId>jdocking</artifactId>\n      <version>${jdocking.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>com.mycom.hosted</groupId>\n      <artifactId>tar</artifactId>\n      <version>${mycom-tar.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>com.mycom.hosted</groupId>\n      <artifactId>jai_core</artifactId>\n      <version>${jai.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>com.mycom.hosted</groupId>\n      <artifactId>jai_codec</artifactId>\n      <version>${jai.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>com.mycom.hosted</groupId>\n      <artifactId>acme</artifactId>\n      <version>${acme.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>com.mycom.hosted</groupId>\n      <artifactId>tools</artifactId>\n      <version>${java_minor_version}.0.${project.version.jdk.minor}</version>\n      <scope>provided</scope>\n    </dependency>\n    <!-- Dependencies on other Kernel modules -->\n    <dependency>\n      <groupId>com.mycom.kernel</groupId>\n      <artifactId>etl-jms-api</artifactId>\n      <version>${project.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>com.mycom.kernel</groupId>\n      <artifactId>core</artifactId>\n      <version>${project.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>com.mycom.kernel</groupId>\n      <artifactId>ipbase</artifactId>\n      <version>${project.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>com.mycom.kernel</groupId>\n      <artifactId>gis</artifactId>\n      <version>${project.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>com.mycom.kernel</groupId>\n      <artifactId>fflayer</artifactId>\n      <version>${project.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>com.mycom.kernel</groupId>\n      <artifactId>licmgr-api</artifactId>\n      <version>${project.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>com.mycom.kernel</groupId>\n      <artifactId>xlgeo-conf</artifactId>\n      <version>${project.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>com.mycom.kernel</groupId>\n      <artifactId>alarm-rest-api</artifactId>\n      <version>${project.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>com.mycom</groupId>\n      <artifactId>commons</artifactId>\n      <version>${mycom-commons.version}</version>\n      <exclusions>\n        <exclusion>\n          <groupId>org.slf4j</groupId>\n          <artifactId>jcl-over-slf4j</artifactId>\n        </exclusion>\n      </exclusions>\n    </dependency>\n    <dependency>\n      <groupId>org.glassfish.jersey.media</groupId>\n      <artifactId>jersey-media-json-jackson</artifactId>\n      <version>${jersey.version}</version>\n      <scope>runtime</scope>\n    </dependency>\n    <!-- 5.2 in group id com.itextpdf , but license has to be double checked -->\n    <dependency>\n      <groupId>com.lowagie</groupId>\n      <artifactId>itext</artifactId>\n      <version>${itext.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>xerces</groupId>\n      <artifactId>xercesImpl</artifactId>\n      <version>${xerces.version}</version>\n      <exclusions>\n        <exclusion>\n          <artifactId>xmlParserAPIs</artifactId>\n          <groupId>xerces</groupId>\n        </exclusion>\n      </exclusions>\n    </dependency>\n    <dependency>\n      <groupId>org.jfree</groupId>\n      <artifactId>jfreechart</artifactId>\n      <version>${jfreechart.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>com.mycom.hosted</groupId>\n      <artifactId>snmp4j</artifactId>\n      <version>${snmp4j.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>com.mycom.hosted</groupId>\n      <artifactId>snmp4j-agent</artifactId>\n      <version>${snmp4jagent.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>javax.mail</groupId>\n      <artifactId>mail</artifactId>\n      <version>${legacy.javax.mail.version}</version>\n    </dependency>\n    <!-- Java help, Mycom rebuilt (to delete some classes only) official is javax.help.javahelp with version 2.0.05 -->\n    <dependency>\n      <groupId>com.mycom.hosted</groupId>\n      <artifactId>jh</artifactId>\n      <version>${javahelp.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>com.mycom.kernel</groupId>\n      <artifactId>mdds-roles</artifactId>\n      <version>${project.version}</version>\n    </dependency>\n    <!-- for jspnims -->\n    <!-- in 03.03 we integrate a \"2.4\" version, I suspect the jar version has been mistaken with the api version -->\n    <dependency>\n      <groupId>javax.servlet</groupId>\n      <artifactId>jsp-api</artifactId>\n      <version>${jsp-api.version}</version>\n      <scope>compile</scope>\n    </dependency>\n    <!--<dependency> <groupId>tomcat</groupId> <artifactId>servlet-api</artifactId> <version>5.5.23</version> <scope>compile</scope> </dependency> -->\n    <!-- should be repalced with ??? : <dependency> <groupId>org.apache.tomcat</groupId> <artifactId>servlet-api</artifactId> <version>6.0.35</version> </dependency> -->\n    <!-- TODO: find where that's useful -->\n    <!--<dependency> <groupId>jstl</groupId> <artifactId>jstl</artifactId> <version>1.2</version> </dependency> -->\n    <dependency>\n      <groupId>org.apache.tomcat</groupId>\n      <artifactId>servlet-api</artifactId>\n      <version>${servlet-api.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>jaxen</groupId>\n      <artifactId>jaxen</artifactId>\n    </dependency>\n    <dependency>\n      <groupId>com.mycom.hosted</groupId>\n      <artifactId>mysql</artifactId>\n      <version>${mysql.version}</version>\n      <scope>runtime</scope>\n    </dependency>\n    <dependency>\n      <groupId>com.mycom.hosted</groupId>\n      <artifactId>oracle</artifactId>\n      <version>${oracle.version}</version>\n      <scope>runtime</scope>\n    </dependency>\n    <!-- Findbugs annotations -->\n    <dependency>\n      <groupId>com.google.code.findbugs</groupId>\n      <artifactId>annotations</artifactId>\n      <version>${findbugs.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>com.google.code.findbugs</groupId>\n      <artifactId>jsr305</artifactId>\n      <version>${findbugs.version}</version>\n    </dependency>\n    <!-- JUNIT -->\n    <dependency>\n      <groupId>junit</groupId>\n      <artifactId>junit</artifactId>\n      <version>${junit.version}</version>\n      <scope>test</scope>\n    </dependency>\n    <dependency>\n      <groupId>org.mockito</groupId>\n      <artifactId>mockito-core</artifactId>\n      <version>${mockito.version}</version>\n      <scope>test</scope>\n    </dependency>\n    <dependency>\n      <groupId>com.mycom</groupId>\n      <artifactId>mycom-junit-nodeps</artifactId>\n      <version>${mycom-junit-nodeps.version}</version>\n      <scope>test</scope>\n      <exclusions>\n        <exclusion>\n          <artifactId>commons-logging</artifactId>\n          <groupId>commons-logging</groupId>\n        </exclusion>\n      </exclusions>\n    </dependency>\n    <!-- antlr necessary for queries generation -->\n    <dependency>\n      <groupId>antlr</groupId>\n      <artifactId>antlr</artifactId>\n      <version>${antlr.version}</version>\n    </dependency>\n    <!-- Guava -->\n    <dependency>\n      <groupId>com.google.guava</groupId>\n      <artifactId>guava</artifactId>\n      <version>${guava.version}</version>\n    </dependency>\n    <dependency>\n      <groupId>org.powermock</groupId>\n      <artifactId>powermock-module-junit4</artifactId>\n      <version>${powermock.version}</version>\n      <scope>test</scope>\n    </dependency>\n    <dependency>\n      <groupId>org.powermock</groupId>\n      <artifactId>powermock-api-mockito</artifactId>\n      <version>${powermock.version}</version>\n      <scope>test</scope>\n    </dependency>\n  </dependencies>\n  <build>\n    <plugins>\n      <plugin>\n        <groupId>org.codehaus.mojo</groupId>\n        <artifactId>build-helper-maven-plugin</artifactId>\n        <version>${build-helper-maven-plugin.version}</version>\n        <executions>\n          <execution>\n            <id>add-test-source</id>\n            <phase>generate-test-sources</phase>\n            <goals>\n              <goal>add-test-source</goal>\n            </goals>\n            <configuration>\n              <sources>\n                <source>src/it/java</source>\n              </sources>\n            </configuration>\n          </execution>\n          <execution>\n            <id>attach-distribution-javadoc</id>\n            <phase>package</phase>\n            <goals>\n              <goal>attach-artifact</goal>\n            </goals>\n            <configuration>\n              <artifacts>\n                <artifact>\n                  <file>${project.build.directory}/${nims.api.javadoc.tar}</file>\n                  <type>tar</type>\n                  <classifier>${nims.api.javadoc.classifier}</classifier>\n                </artifact>\n              </artifacts>\n            </configuration>\n          </execution>\n        </executions>\n      </plugin>\n      <plugin>\n        <groupId>org.apache.maven.plugins</groupId>\n        <artifactId>maven-compiler-plugin</artifactId>\n      </plugin>\n      <plugin>\n        <groupId>com.mycom</groupId>\n        <artifactId>mycom-build-info-plugin</artifactId>\n      </plugin>\n      <plugin>\n        <groupId>org.codehaus.mojo</groupId>\n        <artifactId>findbugs-maven-plugin</artifactId>\n        <configuration>\n          <failOnError>false</failOnError>\n        </configuration>\n      </plugin>\n      <plugin>\n        <groupId>org.codehaus.mojo</groupId>\n        <artifactId>antlr-maven-plugin</artifactId>\n        <configuration>\n          <grammars>nims/mddb/formula/FormulaParserDefinition.g</grammars>\n        </configuration>\n      </plugin>\n      <plugin>\n        <groupId>com.mycom</groupId>\n        <artifactId>gendb-maven-plugin</artifactId>\n      </plugin>\n      <plugin>\n        <groupId>org.codehaus.mojo</groupId>\n        <artifactId>rmic-maven-plugin</artifactId>\n      </plugin>\n      <plugin>\n        <groupId>org.apache.maven.plugins</groupId>\n        <artifactId>maven-dependency-plugin</artifactId>\n      </plugin>\n      <plugin>\n        <groupId>org.apache.maven.plugins</groupId>\n        <artifactId>maven-surefire-plugin</artifactId>\n        <configuration>\n          <printSummary>true</printSummary>\n          <systemProperties>\n             <java.awt.headless>true</java.awt.headless>\n          </systemProperties>\n          <excludes>\n            <exclude>**/nims/mddb/sql/*</exclude>\n            <exclude>**/com/mycom/alarm/gui/BaseAlarmViewerTest.java</exclude>\n          </excludes>\n        </configuration>\n      </plugin>\n      <plugin>\n        <groupId>org.apache.maven.plugins</groupId>\n        <artifactId>maven-antrun-plugin</artifactId>\n        <version>${maven-antrun-plugin.version}</version>\n        <executions>\n          <execution>\n            <id>prepare-javadoc-nimsapi</id>\n            <phase>prepare-package</phase>\n            <goals>\n              <goal>run</goal>\n            </goals>\n            <configuration>\n              <target>\n                <mkdir dir=\"${nims.api.javadoc.dir}\" />\n                <javadoc destdir=\"${nims.api.javadoc.dir}\" author=\"true\" version=\"true\" use=\"true\">\n                  <fileset dir=\"${basedir}/src/main/java\" defaultexcludes=\"no\">\n                    <include name=\"nims/api/*\" />\n                    <exclude name=\"nims/api/*.txt\" />\n                    <exclude name=\"nims/api/*.sample\" />\n                    <exclude name=\"nims/api/Internal*\" />\n                    <exclude name=\"nims/api/NimsAPIKey*\" />\n                    <exclude name=\"nims/api/ConnectionKey*\" />\n                  </fileset>\n                </javadoc>\n                <tar longfile=\"gnu\" destfile=\"${project.build.directory}/${nims.api.javadoc.tar}\">\n                  <tarfileset dir=\"${nims.api.javadoc.dir}\">\n                    <include name=\"**/*\" />\n                  </tarfileset>\n                </tar>\n              </target>\n            </configuration>\n          </execution>\n        </executions>\n        <dependencies>\n          <dependency>\n            <groupId>com.mycom</groupId>\n            <artifactId>mycom-anttasks</artifactId>\n            <version>${mycom-anttasks.version}</version>\n          </dependency>\n          <dependency>\n            <groupId>log4j</groupId>\n            <artifactId>log4j</artifactId>\n            <version>${log4j.version}</version>\n          </dependency>\n          <dependency>\n            <groupId>commons-logging</groupId>\n            <artifactId>commons-logging</artifactId>\n            <version>${commons-logging.version}</version>\n          </dependency>\n          <dependency>\n            <groupId>org.apache.ant</groupId>\n            <artifactId>ant-jsch</artifactId>\n            <version>${ant-jsch.version}</version>\n          </dependency>\n          <dependency>\n            <groupId>ant-contrib</groupId>\n            <artifactId>ant-contrib</artifactId>\n            <version>${ant-contrib.version}</version>\n            <exclusions>\n              <exclusion>\n                <groupId>ant</groupId>\n                <artifactId>ant</artifactId>\n              </exclusion>\n            </exclusions>\n          </dependency>\n          <dependency>\n            <groupId>org.apache.ant</groupId>\n            <artifactId>ant-javamail</artifactId>\n            <version>${ant.version}</version>\n          </dependency>\n          <dependency>\n            <groupId>javax.mail</groupId>\n            <artifactId>mail</artifactId>\n            <version>${javax.mail.version}</version>\n          </dependency>\n        </dependencies>\n      </plugin>\n    </plugins>\n  </build>\n  <profiles>\n    <profile>\n      <id>mycomci</id>\n      <activation>\n        <activeByDefault>false</activeByDefault>\n      </activation>\n      <properties>\n        <it.skip>false</it.skip>\n      </properties>\n      <build>\n        <plugins>\n          <plugin>\n            <groupId>org.apache.maven.plugins</groupId>\n            <artifactId>maven-failsafe-plugin</artifactId>\n            <version>${maven-failsafe-plugin.version}</version>\n            <executions>\n              <execution>\n                <id>integration-test</id>\n                <phase>integration-test</phase>\n                <goals>\n                  <goal>integration-test</goal>\n                  <goal>verify</goal>\n                </goals>\n                <configuration>\n                  <skipITs>${it.skip}</skipITs>\n                  <systemPropertyVariables>\n                    <nims.admin.host>${deploy.it.host}</nims.admin.host>\n                    <nims.admin.user>administrator</nims.admin.user>\n                    <nims.admin.passwd></nims.admin.passwd>\n                  </systemPropertyVariables>\n                </configuration>\n              </execution>\n            </executions>\n          </plugin>\n        </plugins>\n      </build>\n    </profile>\n  </profiles>\n\n</project>\n",
+			"file": "/C/Users/rquillevere/AppData/Local/Temp/p4v/FR-RQuillevere_perforce.mycom-int.fr_1667/depot/kernel/04.02/nims/pom#39.xml",
+			"file_size": 17998,
+			"file_write_time": 131140131289169460,
+			"settings":
+			{
+				"buffer_size": 17494,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Github/gatling-maven-plugin-demo/pom.xml",
+			"settings":
+			{
+				"buffer_size": 1571,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Mycom/depot/kernel/05.00/qa/nbi/nbi-qa-api/pom.xml",
+			"settings":
+			{
+				"buffer_size": 6385,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Apps/Eclipse/Eclipse4.5/eclipse.ini",
+			"settings":
+			{
+				"buffer_size": 460,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Apps/Maven/apache-maven-3.3.3/bin/mvn.cmd",
+			"settings":
+			{
+				"buffer_size": 5930,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "{java.runtime.name=Java(TM) SE Runtime Environment\n sun.boot.library.path=C:\\Program Files\\Java\\jdk1.8.0_51\\jre\\bin\n java.vm.version=25.51-b03\n java.vm.vendor=Oracle Corporation\n java.vendor.url=http://java.oracle.com\n/\n guice.disable.misplaced.annotation.check=true\n path.separator=;\n java.vm.name=Java HotSpot(TM) 64-Bit Server VM\n file.encoding.pkg=sun.io\n user.country=GB\n user.script=\n sun.java.launcher=SUN_STANDARD\n sun.os.patch\n.level=Service Pack 1\n java.vm.specification.name=Java Virtual Machine Specification\n user.dir=C:\\Mycom\\depot\\kernel\\05.00\\qa\\nbi\\nbi-qa-v2-perf\n java.runtime.version=1.8.0_51-b16\n java.awt.graphicsenv=sun.awt.Win32Gr\naphicsEnvironment\n java.endorsed.dirs=C:\\Program Files\\Java\\jdk1.8.0_51\\jre\\lib\\endorsed\n os.arch=amd64\n java.io.tmpdir=C:\\Users\\RQUILL~1\\AppData\\Local\\Temp\\\n line.separator=\n\n java.vm.specification.vendor=Oracle Corporation\n user.variant=\n os.name=Windows 7\n classworlds.conf=C:\\\\Apps\\\\Maven\\\\apache-maven-3.3.3\\\\bin\\\\..\\\\bin\\\\m2.conf\n sun.jnu.encoding=Cp1252\n java.library.path=C:\\Program F\niles\\Java\\jdk1.8.0_51\\jre\\bin;C:\\Windows\\Sun\\Java\\bin;C:\\Windows\\system32;C:\\Windows;C:\\tools\\ruby23\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\n\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management E\nngine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Lenovo\\Fingerprint Manager Pro\\;C:\\Program\nFiles (x86)\\Common Files\\Lenovo;C:\\SWTOOLS\\ReadyApps;C:\\Program Files\\Perforce;C:\\Apps\\Maven\\apache-maven-3.3.3\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\Git\\bin;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Progra\nm Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\rquillevere\\AppData\\Roaming\\npm;C:\\Apps\\Python27;C:\\Apps\\gcloud\\google-cloud-sdk\\bin;C:\\Apps\\appengine\n-java-sdk-1.9.30\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;.\n java.specification.name=Java Platform API Specification\n java.class.version=52.0\n sun.management.compiler=Ho\ntSpot 64-Bit Tiered Compilers\n os.version=6.1\n jdk.tls.allowUnsafeServerCertChange=true\n user.home=C:\\Users\\rquillevere\n user.timezone=Europe/London\n java.awt.printerjob=sun.awt.windows.WPrinterJob\n file.encoding=Cp12\n52\n java.specification.version=1.8\n sun.security.ssl.allowUnsafeRenegotiation=true\n java.class.path=C:\\Users\\rquillevere\\AppData\\Local\\Temp\\gatlingbooter2608565639432297801.jar\n user.name=rquillevere\n java.vm.specific\nation.version=1.8\n sun.java.command=C:\\Users\\rquillevere\\AppData\\Local\\Temp\\gatlingbooter2608565639432297801.jar io.gatling.app.Gatling C:\\Users\\rquillevere\\AppData\\Local\\Temp\\gatling-maven-plugin-5121949977868347766.\nargs\n java.home=C:\\Program Files\\Java\\jdk1.8.0_51\\jre\n sun.arch.data.model=64\n user.language=en\n java.specification.vendor=Oracle Corporation\n awt.toolkit=sun.awt.windows.WToolkit\n java.vm.info=mixed mode\n java.versio\nn=1.8.0_51\n java.ext.dirs=C:\\Program Files\\Java\\jdk1.8.0_51\\jre\\lib\\ext;C:\\Windows\\Sun\\Java\\lib\\ext\n sun.boot.class.path=C:\\Program Files\\Java\\jdk1.8.0_51\\jre\\lib\\resources.jar;C:\\Program Files\\Java\\jdk1.8.0_51\\jre\\li\nb\\rt.jar;C:\\Program Files\\Java\\jdk1.8.0_51\\jre\\lib\\sunrsasign.jar;C:\\Program Files\\Java\\jdk1.8.0_51\\jre\\lib\\jsse.jar;C:\\Program Files\\Java\\jdk1.8.0_51\\jre\\lib\\jce.jar;C:\\Program Files\\Java\\jdk1.8.0_51\\jre\\lib\\charsets\n.jar;C:\\Program Files\\Java\\jdk1.8.0_51\\jre\\lib\\jfr.jar;C:\\Program Files\\Java\\jdk1.8.0_51\\jre\\classes\n java.vendor=Oracle Corporation\n file.separator=\\\n java.vendor.url.bug=http://bugreport.sun.com/bugreport/\n sun.io.u\nnicode.encoding=UnicodeLittle\n sun.cpu.endian=little\n sun.desktop=windows\n sun.cpu.isalist=amd64}",
+			"settings":
+			{
+				"buffer_size": 3977,
+				"line_ending": "Windows",
+				"name": "{java.runtime.name=Java(TM) SE Runtime Environment"
+			}
+		},
+		{
+			"contents": " <configuration>\n          <redirectTestOutputToFile>false</redirectTestOutputToFile>\n          <systemPropertyVariables>\n            <oauth.id>${oauth.client.id}</oauth.id>\n            <oauth.url>${oauth.client.url}/nova.oauth-4.2</oauth.url>\n            <service.url>${deploy.it.tomcat.url}/nims.nbi.rest-5.0/</service.url>\n            <nbi.url>${deploy.it.tomcat.url}/nims.nbi.rest-5.0</nbi.url>\n          </systemPropertyVariables>\n        </configuration>\n        <executions>\n          <execution>\n            <id>v2-perf-test</id>\n            <goals>\n              <goal>test</goal>\n            </goals> \n            <configuration>\n              <systemProperties>\n                <service.url>${deploy.it.tomcat.url}/nims.nbi.rest-5.0/</service.url>\n              </systemProperties>\n            </configuration>\n          </execution>\n        </executions>\n\n\n\n\n\n<artifactId>maven-surefire-plugin</artifactId>\n        <version>2.18.1</version>\n        <executions>\n          <execution>\n            <id>default-test</id>\n            <phase>test</phase>\n            <goals>\n              <goal>test</goal>\n            </goals>\n            <configuration>\n              <printSummary>true</printSummary>\n              <systemProperties>\n                <java.awt.headless>true</java.awt.headless>\n              </systemProperties>\n              <redirectTestOutputToFile>true</redirectTestOutputToFile>\n              <argLine>-Djava.io.tmpdir=C:\\Mycom\\depot\\kernel\\05.00\\qa\\nbi\\nbi-qa-v2-perf\\target/junit-tmp </argLine>\n            </configuration>\n          </execution>\n        </executions>\n        <configuration>\n          <printSummary>true</printSummary>\n          <systemProperties>\n            <java.awt.headless>true</java.awt.headless>\n          </systemProperties>\n          <redirectTestOutputToFile>true</redirectTestOutputToFile>\n          <argLine>-Djava.io.tmpdir=C:\\Mycom\\depot\\kernel\\05.00\\qa\\nbi\\nbi-qa-v2-perf\\target/junit-tmp </argLine>\n        </configuration>\n\n\n\n\n\n\n\n\n\n\n\n",
+			"settings":
+			{
+				"buffer_size": 2003,
+				"line_ending": "Windows",
+				"name": "<configuration>"
+			}
+		},
+		{
+			"contents": "val myProp = sys.env.get(\"my.property\")\nval props = System.getProperties()\nval myProp2 = props.get(\"my.property\")\nval myProp3 = System.getenv(\"my.property\")\nval myProp4 = System.getProperty(\"my.property\")\nval myProp5 = scala.util.Properties.envOrElse(\"my.property\", \"not found 5\" )",
+			"settings":
+			{
+				"buffer_size": 281,
+				"line_ending": "Windows",
+				"name": "val myProp = sys.env.get(\"my.property\")"
+			}
+		},
+		{
+			"contents": "<executions>\n          <execution>\n            <id>v2-perf-test</id>\n            <goals>\n              <goal>test</goal>\n            </goals> \n            <configuration>\n              <systemProperties>\n                <service.url>${deploy.it.tomcat.url}/nims.nbi.rest-5.0/</service.url>\n              </systemProperties>\n            </configuration>\n          </execution>\n        </executions>\n\n",
+			"settings":
+			{
+				"buffer_size": 399,
+				"line_ending": "Windows",
+				"name": "<executions>"
+			}
+		}
 	],
 	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 173.0,
+		"last_filter": "Install",
 		"selected_items":
 		[
+			[
+				"Install",
+				"Package Control: Install Package"
+			]
 		],
-		"width": 0.0
+		"width": 432.0
 	},
 	"console":
 	{
@@ -85,8 +173,26 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/C/Github/ronanquillevere.github.io"
+	],
 	"file_history":
 	[
+		"/C/Mycom/depot/kernel/05.00/forge/pom.xml",
+		"/C/Mycom/depot/kernel/05.00/forge/kernel-lineup/pom.xml",
+		"/C/Mycom/depot/kernel/05.00/pom.xml",
+		"/C/Mycom/depot/kernel/05.00/qa/nbi/nbi-perf/src/test/resources/gatling.conf",
+		"/C/Apps/Eclipse/Eclipse4.5/http",
+		"/C/Users/rquillevere/Documents/MobaXterm/slash/RemoteFiles/0/mycom@ea-mediation-demo.mycom-int.fr/collJobe4431b6a021c42f790f0a0d8bceb2034808d336dc01142f19b85b8ab338debad.json",
+		"/C/Users/rquillevere/Documents/MobaXterm/slash/RemoteFiles/1/mycom@ea-mediation-it.mycom-int.fr/PM_100K_MOI.json",
+		"/C/Users/rquillevere/AppData/Local/Temp/p4v/FR-RQuillevere_perforce.mycom-int.fr_1667/depot/kernel/04.02/nims/PrOptimaClient#1.launch",
+		"/C/Github/ronanquillevere.github.io/_posts/2016-06-23-blockchain.markdown",
+		"/C/Users/rquillevere/Desktop/NBI_HA",
+		"/C/Github/ronanquillevere.github.io/_config.yml",
+		"/C/Mycom/depot/ea/designer/service/service-designer/src/test/js/components/template/sidebox/testTemplateInstanceListController.js",
+		"/C/Users/rquillevere/Desktop/ArchiNBI",
+		"/C/Github/ronanquillevere.github.io/_posts/2016-06-15-ddd-aggregate.markdown",
 		"/Users/ronan/GitHub/ronanquillevere.github.io/_posts/2014-07-28-gin-debug-tips.markdown",
 		"/Users/ronan/GitHub/ronanquillevere.github.io/_includes/headdefault.html",
 		"/Users/ronan/GitHub/ronanquillevere.github.io/_posts/2013-03-04-gwt-rest-jersey-server.markdown",
@@ -138,7 +244,7 @@
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 30.0
 	},
 	"find_in_files":
 	{
@@ -154,6 +260,21 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"service.url",
+			"serviceUrl",
+			",",
+			"“",
+			"”",
+			"“",
+			"”",
+			"“",
+			"”",
+			"“",
+			"'",
+			"“",
+			"”",
+			"\"",
+			"bitcoin",
 			"RedirectionResponseFilter",
 			"red",
 			"### ",
@@ -184,9 +305,15 @@
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"my.property",
+			"myProp",
+			"\\n",
+			"\"",
+			"'",
+			"Bitcoin",
 			"#### ",
 			"####",
 			"javascript",
@@ -201,14 +328,275 @@
 	"groups":
 	[
 		{
+			"selected": 7,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/rquillevere/AppData/Local/Temp/p4v/FR-RQuillevere_perforce.mycom-int.fr_1667/depot/kernel/04.02/nims/pom#39.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17494,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								914,
+								1133
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Github/gatling-maven-plugin-demo/pom.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1571,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Mycom/depot/kernel/05.00/qa/nbi/nbi-qa-api/pom.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6385,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								386,
+								398
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Apps/Eclipse/Eclipse4.5/eclipse.ini",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 460,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								458,
+								458
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/Apps/Maven/apache-maven-3.3.3/bin/mvn.cmd",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5930,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2586,
+								2586
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Batch File/Batch File.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 660.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3977,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								671,
+								671
+							]
+						],
+						"settings":
+						{
+							"auto_name": "{java.runtime.name=Java(TM) SE Runtime Environment",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2003,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								866,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<configuration>",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 281,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								281,
+								281
+							]
+						],
+						"settings":
+						{
+							"auto_name": "val myProp = sys.env.get(\"my.property\")",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 399,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								397,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<executions>",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 30.0
 	},
 	"input":
 	{
@@ -241,15 +629,17 @@
 	{
 		"height": 0.0
 	},
+	"pinned_build_system": "Packages/User/Karma.sublime-build",
 	"project": "homepage.sublime-project",
 	"replace":
 	{
-		"height": 64.0
+		"height": 70.0
 	},
 	"save_all_on_build": true,
 	"select_file":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -258,6 +648,7 @@
 	"select_project":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -266,11 +657,13 @@
 	"select_symbol":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
 		"width": 0.0
 	},
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -278,7 +671,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 530.0,
+	"side_bar_width": 235.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
