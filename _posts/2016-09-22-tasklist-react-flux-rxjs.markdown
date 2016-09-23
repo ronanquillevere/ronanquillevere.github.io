@@ -15,16 +15,15 @@ Here is what we are going to build :
 
 ![tasklist](/img/tasklist.png)
 
-The code can be found [here](https://github.com/ronanquillevere/tasklist-react-flux-rxjs); 
+The code can be found on Github [here](https://github.com/ronanquillevere/tasklist-react-flux-rxjs). Feel free to fork it :)
 
-It is composed of 3 React components, a *form* to create a task, a *task list* and a *badge* in the header showing the number of tasks.
+It is composed of 3 React components, a **form** to create a task, a **task list** and a **badge** in the header showing the number of tasks.
 
 # Flux
 
-We will follow the [flux architecture](https://facebook.github.io/flux/) as defined by Facebook
-<img class="center" src="https://facebook.github.io/flux/img/flux-simple-f8-diagram-explained-1300w.png" alt="flux" width="600px">
+We will follow the [flux architecture](https://facebook.github.io/flux/) as defined by Facebook. To do so we will be using [RxJS](https://github.com/Reactive-Extensions/RxJS) version 4.
 
-To do so we will be using [RxJS](https://github.com/Reactive-Extensions/RxJS) version 4.
+<img class="center" src="https://facebook.github.io/flux/img/flux-simple-f8-diagram-explained-1300w.png" alt="flux" width="600px">
 
 # The form
 [createTaskForm.js](https://github.com/ronanquillevere/tasklist-react-flux-rxjs/blob/master/createTaskForm.js)
