@@ -25,6 +25,39 @@ We will follow the [flux architecture](https://facebook.github.io/flux/) as defi
 
 <img class="center" src="https://facebook.github.io/flux/img/flux-simple-f8-diagram-explained-1300w.png" alt="flux" width="600px">
 
+
+# The dispatcher
+
+[dispatcher.js](https://github.com/ronanquillevere/tasklist-react-flux-rxjs/blob/master/dispatcher.js)
+
+Let's start by the dispatcher. It is really simple if you know a little bit RxJS. If not you could see this as a kind of `eventBus`. The dispatch method will send an event on the bus `_actionSubject`. 
+
+{% highlight javascript %}
+dispatch : function(action)
+{
+	_actionSubject.onNext(action);
+}
+{% endhighlight %}
+
+Subscribers will be called if the action type correspond to the `type` parameter passed in the subscription. To do that we use the filter method that will give us a new kind of eventbus (observable) containing only the event of the right type. The subscriber can then subscribe to this new eventbus. Note that to keep the tutorial simple we did not implement any dispose/unregister mechanism.
+
+{% highlight javascript %}
+subscribe : function(type, onAction)
+{
+	if (typeof onAction !== 'function')
+        throw Error('Invalid action callback');
+
+     var observable = _actionSubject
+        .filter(function filterEvent(event)
+        {
+            return (typeof event === 'object') && event.type === type;
+        });
+
+    return observable.subscribe(onAction);
+}
+{% endhighlight %}
+
+
 # The form
 [createTaskForm.js](https://github.com/ronanquillevere/tasklist-react-flux-rxjs/blob/master/createTaskForm.js)
 
@@ -63,7 +96,7 @@ render: function()
     }
 {% endhighlight %}
 
-Now let's have a look at the `handleSubmit` method. Note the `e.preventDefault()` to avoid really submitting the form. Here our javascript code is going to take care of things. Once the submit is pressed we send an `action` of type `CREATE_TASK` thanks to a dispatcher that was passed with the props `his.props.dispatcher.dispatch(action);`. Finally we clear the textfield by using the setState method `this.setState({text: ''});`
+Now let's have a look at the `handleSubmit` method. Note the `e.preventDefault()` to avoid really submitting the form. Here our javascript code is going to take care of things. Once the submit is pressed we send an `action` of type `CREATE_TASK` thanks to a dispatcher that was passed with the props `this.props.dispatcher.dispatch(action);`. Finally we clear the textfield by using the setState method `this.setState({text: ''});`
 
 {% highlight javascript %}
 handleSubmit: function(e)
@@ -97,7 +130,7 @@ ReactDOM.render(
 
 [taskStore.js](https://github.com/ronanquillevere/tasklist-react-flux-rxjs/blob/master/taskStore.js)
 
-To save our tasks we need a store. As my implementation is really basic it does need to much explanations. I create a function to build my taskStore. My store should be able to react to actions and update its internal state. This is done using the dispatcher subscribe method `dispatcher.subscribe('CREATE_TASK', addTask);` We listen to `CREATE_TASK` and `DELETE_TASK` events and trigger the appropriate method for each case.
+To save our tasks we need a store. As my implementation is really basic it does need too much explanations. I create a function to build my taskStore. My store should be able to listen to actions and update its internal state as a consequence. This is done using the dispatcher subscribe method `dispatcher.subscribe();`. It means the store will listen to `CREATE_TASK` and `DELETE_TASK` events and trigger the appropriate method for each case.
 
 
 {% highlight javascript %}
@@ -138,7 +171,7 @@ var taskStore = new TaskStore(dispatcher);
 
 [createTaskList.js](https://github.com/ronanquillevere/tasklist-react-flux-rxjs/blob/master/createTaskList.js)
 
-Now the task list should display all our tasks. To do so our task list we listen to an `TASK_STORE_UPDATED` event sent by the store. We could have implemented this differently registering a callback to the taskstore directly inside the view. I prefer this implementation so that the task list does not know about the taskstore. The only dependency is on the dispatcher. This could be problematic though if stores start calling themselves, but this is out of the scope of this tutorial.
+Now the task list should display all our tasks. To do so, our task list will listen to a `TASK_STORE_UPDATED` event sent by the store. Noet that we could have implemented this differently registering a callback to the taskstore directly inside the view. I prefer this implementation so that the task list does not know about the taskstore. The only dependency is on the dispatcher. This could be problematic though if stores start calling themselves, but this is out of the scope of this tutorial.
 
 My task list will be composed of a list of taskNode
 
@@ -153,7 +186,7 @@ return (
         );
 {% endhighlight %}
 
-We will build the list of task nodes using the map function on the `state.tasks`. Each node is just a div containing the text of the task and a button to delete it.
+We will build the list of task nodes using the map function on the `state.tasks` that will create a new array filled with React elements. Each node is just a div containing the text of the task and a button to delete it.
 
 {% highlight javascript %}
 var that = this;
@@ -188,7 +221,7 @@ var taskNodes = this.state.tasks.map(function(task)
 });
 {% endhighlight %}
 
-The state.tasks is updated by listening to the TASK_STORE_UPDATED event. We subscribe to this event using the `componentDidMount` method. We then simply call the `setState` method.
+The state.tasks is updated by listening to the `TASK_STORE_UPDATED` event. We subscribe to this event after the `componentDidMount`. We then simply call the `setState` method to re-render the view everytime we receive the `TASK_STORE_UPDATED` event. Note that React is smart and will only update the part of the dom that has changed, which is why React it is so efficient.
 
 {% highlight javascript %}
 getInitialState: function()
@@ -258,38 +291,5 @@ _onTaskStoreUpdated: function(e)
     });
 }
 {% endhighlight %}
-
-# The dispatcher
-
-[dispatcher.js](https://github.com/ronanquillevere/tasklist-react-flux-rxjs/blob/master/dispatcher.js)
-
-Last but not least the dispatcher. It is really simple if you know a little bit RxJS. You could see this as a kind of eventBus. The dispatch method will send the event on the bus `_actionSubject`. 
-
-{% highlight javascript %}
-dispatch : function(action)
-{
-	_actionSubject.onNext(action);
-}
-{% endhighlight %}
-
-Subscribers will be called if the action type correspond to the parameter passed in the subscription. To do that we use the filter method that will give us a new kind of eventbus (observable) containing only the event of the right type. The subscriber can then subscribe to this new event bus. Note that to keep the tutorial simple we did not implement any dispose/unregister mechanism.
-
-{% highlight javascript %}
-subscribe : function(type, onAction)
-{
-	if (typeof onAction !== 'function')
-        throw Error('Invalid action callback');
-
-     var observable = _actionSubject
-        .filter(function filterEvent(event)
-        {
-            return (typeof event === 'object') && event.type === type;
-        });
-
-    return observable.subscribe(onAction);
-}
-{% endhighlight %}
-
-
 
 Feel free to comment ! Hope this will be useful.
