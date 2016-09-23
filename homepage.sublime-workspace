@@ -59,15 +59,32 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/C/Users/rquillevere/Desktop/NBI Perf advices",
+			"settings":
+			{
+				"buffer_size": 1348,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 173.0,
+		"last_filter": "Install",
 		"selected_items":
 		[
+			[
+				"Install",
+				"Package Control: Install Package"
+			]
 		],
-		"width": 0.0
+		"width": 432.0
 	},
 	"console":
 	{
@@ -85,8 +102,32 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+	],
 	"file_history":
 	[
+		"/C/Github/ronanquillevere.github.io/_posts/2016-06-23-blockchain.markdown",
+		"/C/Github/ronanquillevere.github.io/_posts/2016-08-25-webcomponents-interactions.markdown",
+		"/C/Github/ronanquillevere.github.io/_posts/2013-08-23-google-io-gwt-videos.markdown",
+		"/C/Users/rquillevere/AppData/Local/Temp/p4v/FR-RQuillevere_perforce.mycom-int.fr_1667/depot/kernel/04.02/nims/pom#39.xml",
+		"/C/Github/gatling-maven-plugin-demo/pom.xml",
+		"/C/Mycom/depot/kernel/05.00/qa/nbi/nbi-qa-api/pom.xml",
+		"/C/Apps/Eclipse/Eclipse4.5/eclipse.ini",
+		"/C/Apps/Maven/apache-maven-3.3.3/bin/mvn.cmd",
+		"/C/Mycom/depot/kernel/05.00/forge/pom.xml",
+		"/C/Mycom/depot/kernel/05.00/forge/kernel-lineup/pom.xml",
+		"/C/Mycom/depot/kernel/05.00/pom.xml",
+		"/C/Mycom/depot/kernel/05.00/qa/nbi/nbi-perf/src/test/resources/gatling.conf",
+		"/C/Apps/Eclipse/Eclipse4.5/http",
+		"/C/Users/rquillevere/Documents/MobaXterm/slash/RemoteFiles/0/mycom@ea-mediation-demo.mycom-int.fr/collJobe4431b6a021c42f790f0a0d8bceb2034808d336dc01142f19b85b8ab338debad.json",
+		"/C/Users/rquillevere/Documents/MobaXterm/slash/RemoteFiles/1/mycom@ea-mediation-it.mycom-int.fr/PM_100K_MOI.json",
+		"/C/Users/rquillevere/AppData/Local/Temp/p4v/FR-RQuillevere_perforce.mycom-int.fr_1667/depot/kernel/04.02/nims/PrOptimaClient#1.launch",
+		"/C/Users/rquillevere/Desktop/NBI_HA",
+		"/C/Github/ronanquillevere.github.io/_config.yml",
+		"/C/Mycom/depot/ea/designer/service/service-designer/src/test/js/components/template/sidebox/testTemplateInstanceListController.js",
+		"/C/Users/rquillevere/Desktop/ArchiNBI",
+		"/C/Github/ronanquillevere.github.io/_posts/2016-06-15-ddd-aggregate.markdown",
 		"/Users/ronan/GitHub/ronanquillevere.github.io/_posts/2014-07-28-gin-debug-tips.markdown",
 		"/Users/ronan/GitHub/ronanquillevere.github.io/_includes/headdefault.html",
 		"/Users/ronan/GitHub/ronanquillevere.github.io/_posts/2013-03-04-gwt-rest-jersey-server.markdown",
@@ -138,7 +179,7 @@
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 30.0
 	},
 	"find_in_files":
 	{
@@ -154,6 +195,22 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"	",
+			"service.url",
+			"serviceUrl",
+			",",
+			"“",
+			"”",
+			"“",
+			"”",
+			"“",
+			"”",
+			"“",
+			"'",
+			"“",
+			"”",
+			"\"",
+			"bitcoin",
 			"RedirectionResponseFilter",
 			"red",
 			"### ",
@@ -184,9 +241,16 @@
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"    ",
+			"my.property",
+			"myProp",
+			"\\n",
+			"\"",
+			"'",
+			"Bitcoin",
 			"#### ",
 			"####",
 			"javascript",
@@ -201,14 +265,44 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/rquillevere/Desktop/NBI Perf advices",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1348,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								287,
+								287
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 30.0
 	},
 	"input":
 	{
@@ -241,6 +335,7 @@
 	{
 		"height": 0.0
 	},
+	"pinned_build_system": "Packages/User/Karma.sublime-build",
 	"project": "homepage.sublime-project",
 	"replace":
 	{
@@ -250,6 +345,7 @@
 	"select_file":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -258,6 +354,7 @@
 	"select_project":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -266,11 +363,13 @@
 	"select_symbol":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
 		"width": 0.0
 	},
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -278,7 +377,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 530.0,
+	"side_bar_width": 217.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
