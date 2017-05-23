@@ -14,7 +14,7 @@ This is a the first article of a series about deploying a webapp on a Kubernetes
 <br>In the following article I will demonstrate how to :
 
 - Deploy Kubernetes with 2 [nodes](https://kubernetes.io/docs/concepts/architecture/nodes/) (the master an a minion)
-- Setup flannel as the network plugin
+- Setup [flannel](https://github.com/coreos/flannel) as the network plugin
 
 # Infrastructure description
 
@@ -182,6 +182,23 @@ You should see something like this
 NAME       STATUS    AGE       VERSION
 server-1   Ready     23h       v1.6.3
 server-2   Ready     3m        v1.6.3
+{% endhighlight %}
+
+You can check that you have a new flannel-ds pod running.
+
+{% highlight bash %}
+kubectl get pods --all-namespaces
+
+NAMESPACE     NAME                               READY     STATUS    RESTARTS   AGE
+kube-system   etcd-server-1                      1/1       Running   0          2h
+kube-system   kube-apiserver-server-1            1/1       Running   0          2h
+kube-system   kube-controller-manager-server-1   1/1       Running   0          2h
+kube-system   kube-dns-3913472980-2cknz          3/3       Running   33         2h
+kube-system   kube-flannel-ds-1kltd              2/2       Running   0          1h
+kube-system   kube-flannel-ds-xcd15              2/2       Running   23         2h
+kube-system   kube-proxy-2mnjh                   1/1       Running   0          1h
+kube-system   kube-proxy-j7tb0                   1/1       Running   0          2h
+kube-system   kube-scheduler-server-1            1/1       Running   0          2h
 {% endhighlight %}
 
 ### Reset
