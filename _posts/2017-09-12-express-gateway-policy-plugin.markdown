@@ -31,6 +31,6 @@ I managed pretty easily to code my own specific policy inside the gateway that d
 - Extract the text field of the response body
 - Return javascript object with the 2 quotes to caller, does not call next(), with following format ```{chuckQuote : quote1, numberQuote: quote2}```
 
-![flow](../img/merge-example-policy.png)
+![flow](/img/merge-example-policy.png)
 
 Even if the gateway is still very young I think it is an intesting project to follow !
