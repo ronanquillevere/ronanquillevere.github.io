@@ -16,7 +16,7 @@ I was looking at a efficient way to build an API gateway for my job. So first if
 - [Embracing the Differences : Inside the Netflix API Redesign](https://medium.com/netflix-techblog/embracing-the-differences-inside-the-netflix-api-redesign-15fd8b3dc49d)
 - [Martin Fowler serverless](https://martinfowler.com/articles/serverless.html)
 
-I know that [nginx](https://www.nginx.com/solutions/api-gateway/) is probably an excellent option but the licensing does not really suit us and we were looking for an open-source and free option.
+I know that [nginx](https://www.nginx.com/solutions/api-gateway/) is probably an excellent option but the licensing does not really suit us and we were looking for an open-source and free option. I also need to have a look at [kong](https://github.com/Mashape/kong).
 
 I discovered [express-gateway](http://www.express-gateway.io/) and I gave it a try.
 
