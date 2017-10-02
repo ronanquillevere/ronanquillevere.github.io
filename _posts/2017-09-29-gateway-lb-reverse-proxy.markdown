@@ -6,11 +6,6 @@ Tags: [gateway, load-balancer, reverse-proxy]
 Categories: [api]
 
 ---
-<style>
-    .table .tr {
-        border: 1px solid gray;
-    }
-</style>
 
 What is the difference between an api-gateway, a load balancer and a reverse proxy ? Here is my attempt to provide a synthetic synthetic answer. Note that the features below are not mutualy exlusive...
 
