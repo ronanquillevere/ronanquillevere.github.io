@@ -1,6 +1,6 @@
 html {}
 
-body { 
+body {
     position: relative;
     padding-top: 50px;
 }
@@ -10,7 +10,7 @@ body {
 #home-background {
 	background-color: #383838;
 	background-image: url(/img/face.png);
-	background-size: cover; 
+	background-size: cover;
 }
 
 #selfie {
@@ -141,7 +141,7 @@ nav a:hover i
 .posts h3 {
     font-size: 2rem;
     margin: 0;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
 }
 
 .posts li {
@@ -149,7 +149,7 @@ nav a:hover i
 }
 
 
-.container {  
+.container {
     width: 800px;
     padding-right: 15px;
     padding-left: 15px;
