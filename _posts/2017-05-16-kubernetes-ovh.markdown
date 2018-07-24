@@ -6,6 +6,7 @@ Tags: [kubernetes, flannel, orchestration, OVH, kubectl, kubeadm]
 Categories: [devops]
 ---
 
+**(Updated on 24th of July 2018)**
 
 Hello everyone,
 
@@ -20,9 +21,13 @@ This is a the first article of a series about deploying a webapp on a Kubernetes
 
 ## Servers
 
-- 2x Cloud VPS-SSD running Ubuntu 16.10
+- 2x Cloud VPS-SSD running Ubuntu 18.04 server 64bits
 
-![vps-ssd](/img/vps-ssd.png)
+1 Master with 2 vCpus
+![master](/img/vps-ssd3.png)
+
+1 Node with 1 vCpu
+![node](/img/vps-ssd1.png)
 
 # Install Kubernetes
 
@@ -40,10 +45,13 @@ We have followed the [Get Docker for Ubuntu guide](https://docs.docker.com/engin
 
 Remove previous version of docker
 {% highlight bash %}
-sudo apt-get remove docker docker-engine
+sudo apt-get remove docker docker-engine docker.io
+{% endhighlight %}
+{% highlight bash %}
+sudo apt-get update
 {% endhighlight %}
 
-Install community edition
+Install docker community edition
 {% highlight bash %}
 sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -67,7 +75,7 @@ cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
 deb http://apt.kubernetes.io/ kubernetes-xenial main
 EOF
 apt-get update
-apt-get install -y kubelet kubeadm kubectl kubernetes-cni
+apt-get install -y kubelet kubeadm kubectl
 {% endhighlight %}
 
 ### On the Master
@@ -84,9 +92,15 @@ Logout as a normal user and start the cluster
 
 {% highlight bash %}
 logout
-sudo cp /etc/kubernetes/admin.conf $HOME/
-sudo chown $(id -u):$(id -g) $HOME/admin.conf
-export KUBECONFIG=$HOME/admin.conf
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+{% endhighlight %}
+
+Alternatively as root
+
+{% highlight bash %}
+export KUBECONFIG=/etc/kubernetes/admin.conf
 {% endhighlight %}
 
 At this stage the master node should <b>NOT</b> be ready because it is missing a network plugin to start.
@@ -94,8 +108,8 @@ At this stage the master node should <b>NOT</b> be ready because it is missing a
 {% highlight shell %}
 kubectl get nodes
 
-NAME       STATUS     AGE       VERSION
-server-1   NotReady   1m        v1.6.3
+NAME        STATUS     ROLES     AGE       VERSION
+vps569683   NotReady   master    8m        v1.11.1
 {% endhighlight %}
 
 You can run
@@ -111,12 +125,35 @@ We are going to install flannel as a pod network.
 {% highlight bash %}
 kubectl apply -f https://github.com/coreos/flannel/raw/master/Documentation/kube-flannel.yml
 
-serviceaccount "flannel" created
-configmap "kube-flannel-cfg" created
-daemonset "kube-flannel-ds" created
+clusterrole.rbac.authorization.k8s.io/flannel created
+clusterrolebinding.rbac.authorization.k8s.io/flannel created
+serviceaccount/flannel created
+configmap/kube-flannel-cfg created
+daemonset.extensions/kube-flannel-ds-amd64 created
+daemonset.extensions/kube-flannel-ds-arm64 created
+daemonset.extensions/kube-flannel-ds-arm created
+daemonset.extensions/kube-flannel-ds-ppc64le created
+daemonset.extensions/kube-flannel-ds-s390x created
 {% endhighlight %}
 
 Check installation worked
+{% highlight bash %}
+kubectl get pods --all-namespaces
+
+NAMESPACE     NAME                                READY     STATUS    RESTARTS   AGE
+kube-system   coredns-78fcdf6894-cv6z2            1/1       Running   0          16m
+kube-system   coredns-78fcdf6894-dzqc8            1/1       Running   0          16m
+kube-system   etcd-vps569683                      1/1       Running   0          15m
+kube-system   kube-apiserver-vps569683            1/1       Running   0          15m
+kube-system   kube-controller-manager-vps569683   1/1       Running   0          15m
+kube-system   kube-flannel-ds-amd64-cjzcm         1/1       Running   0          1m
+kube-system   kube-proxy-7dbzl                    1/1       Running   0          16m
+kube-system   kube-scheduler-vps569683            1/1       Running   0          15m
+{% endhighlight %}
+
+Everyting is fine.
+
+**For older version of kubectl (1.6) flannel did not started correctly here is the fix**
 {% highlight bash %}
 kubectl get pods --all-namespaces
 
@@ -179,9 +216,9 @@ kubectl get nodes
 
 You should see something like this
 {% highlight bash %}
-NAME       STATUS    AGE       VERSION
-server-1   Ready     23h       v1.6.3
-server-2   Ready     3m        v1.6.3
+NAME        STATUS    ROLES     AGE       VERSION
+vps569683   Ready     master    20m       v1.11.1
+vps569684   Ready     <none>    28s       v1.11.1
 {% endhighlight %}
 
 You can check that you have a new flannel-ds pod running.
@@ -189,16 +226,18 @@ You can check that you have a new flannel-ds pod running.
 {% highlight bash %}
 kubectl get pods --all-namespaces
 
-NAMESPACE     NAME                               READY     STATUS    RESTARTS   AGE
-kube-system   etcd-server-1                      1/1       Running   0          2h
-kube-system   kube-apiserver-server-1            1/1       Running   0          2h
-kube-system   kube-controller-manager-server-1   1/1       Running   0          2h
-kube-system   kube-dns-3913472980-2cknz          3/3       Running   33         2h
-kube-system   kube-flannel-ds-1kltd              2/2       Running   0          1h
-kube-system   kube-flannel-ds-xcd15              2/2       Running   23         2h
-kube-system   kube-proxy-2mnjh                   1/1       Running   0          1h
-kube-system   kube-proxy-j7tb0                   1/1       Running   0          2h
-kube-system   kube-scheduler-server-1            1/1       Running   0          2h
+NAMESPACE     NAME                                READY     STATUS    RESTARTS   AGE
+kube-system   coredns-78fcdf6894-cv6z2            1/1       Running   0          20m
+kube-system   coredns-78fcdf6894-dzqc8            1/1       Running   0          20m
+kube-system   etcd-vps569683                      1/1       Running   0          20m
+kube-system   kube-apiserver-vps569683            1/1       Running   0          20m
+kube-system   kube-controller-manager-vps569683   1/1       Running   0          20m
+kube-system   kube-flannel-ds-amd64-cjzcm         1/1       Running   0          6m
+kube-system   kube-flannel-ds-amd64-g46sh         1/1       Running   0          1m
+kube-system   kube-proxy-7dbzl                    1/1       Running   0          20m
+kube-system   kube-proxy-rcwnh                    1/1       Running   0          1m
+kube-system   kube-scheduler-vps569683            1/1       Running   0          20m
+
 {% endhighlight %}
 
 ### Reset
