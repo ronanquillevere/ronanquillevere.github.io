@@ -19,10 +19,10 @@ Gitlab has recently launch an ["auto-devops"](https://docs.gitlab.com/ee/topics/
 Last but not least, many of the things I will show here could be done differently using other tools like simple npm scripts for example. This is up to you to find the best options for you based on your needs and budget (running jobs has always a cost, at least for our planet).
 
 # The goal
-I want execute the following steps containing one job inside. I think they are quite self-explanatory so I will not detail them. Again the idea here is not to define a pipeline ready for production but to detail how gitlab pipelines work and can be used to deploy on Kubernetes.
+I want execute the sequence of actions. I think they are quite self-explanatory so I will not detail them. Again the idea here is not to define a pipeline ready for production but to detail how gitlab pipelines work and can be used to deploy on Kubernetes.
 
-| Bundle & static analysis           | Test                 | Build                  | Deploy               |
-|------------------|----------------|------------------------|------------------------|----------------------|
+| Bundling & static analysis   | Test     | Build    | Deploy        |
+|------------------|----------------|----------------------|----------------------|
 | Bundle & analyze the code (lint etc.)  | Tests  | Build new docker image | Deploy on Kubernetes |
 
 In the `.gitlab-ci.yml` it would looke like This
@@ -201,9 +201,20 @@ cicd         NodePort    10.105.170.242   <none>        5000:31238/TCP   5m
 You can see that cicd pod is exposed on port 31238. To access my service from the internet I simply browse to the following url where nodeIp is the ip of any of your node:
 `http://<nodeIp>:<NodePort>` in my case NodePort = 31238 as shown above.
 
-The second part is to is to use gitlab to launch a rolling upgrade of our service.
+The second part is to trigger a rolling upgrade of our service when a new image is available. To do so there are many options.
 
-**TO BE COMPLETED SOON**
+One solution could be to use a cron job on a specific pod with the appropriate credential. Nevertheless be carefull when updating your production environment with a new image. This operation should probably be done manually to avoid pulling a bad image.
+
+Another one would be to use gitlab and try to trigger this rolling upgrade from there. By loggin to the master node and access the kubernetes api this should be possible (again I am not concerned by security issues in this article).
+
+**I will try to update this article with an example of how to automate the rolling upgrade when a new image become available but feel free to contribute in the comments**
+
+
+How to do a rolling upgrade inside Kubernetes:
+- [Performing a Rolling Update
+](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/)
+- [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
+- [Perform Rolling Update Using a Replication Controller](https://kubernetes.io/docs/tasks/run-application/rolling-update-replication-controller/)
 
 # Few notes
 
