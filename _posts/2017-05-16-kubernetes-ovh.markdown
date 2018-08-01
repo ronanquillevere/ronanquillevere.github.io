@@ -10,7 +10,7 @@ Categories: [devops]
 
 Hello everyone,
 
-You could be interested as well by the following article : [How to use gitlab pipelines to deploy to kubernetes](2018/07/30/gitlab-pipelines-deploy-kubernetes-ovh.html)
+You could be interested as well by the following article : [How to use gitlab pipelines to deploy to kubernetes](/2018/07/30/gitlab-pipelines-deploy-kubernetes-ovh.html)
 
 <br>In the following article I will demonstrate how to :
 

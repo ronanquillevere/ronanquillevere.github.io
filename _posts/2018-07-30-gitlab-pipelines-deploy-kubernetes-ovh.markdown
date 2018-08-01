@@ -9,7 +9,7 @@ Categories: [devops]
 
 Hello everyone,
 
-It could be interesting for you to have a look at [how to deploy a Kubernetes cluster on OVH](/2017/05/16/kubernetes-ovh.htm) before reading this article.
+It could be interesting for you to have a look at [how to deploy a Kubernetes cluster on OVH](/2017/05/16/kubernetes-ovh.html) before reading this article.
 
 # Disclaimer
 This article is not intended at describing [`continuous delivery`](https://en.wikipedia.org/wiki/Continuous_delivery) to a `production` environment. My goal is to show you the basics of [gitlab pipelines](https://docs.gitlab.com/ee/ci/pipelines.html). To do so we will be "continuously" deploying a Nodejs app to a [kubernetes](https://kubernetes.io/) cluster.
