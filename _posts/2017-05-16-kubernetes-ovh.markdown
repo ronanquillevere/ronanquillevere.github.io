@@ -6,16 +6,17 @@ Tags: [kubernetes, flannel, orchestration, OVH, kubectl, kubeadm]
 Categories: [devops]
 ---
 
-**(Updated on 25th of July 2018 with info on how to install & access dashboard)**
+**(Updated on 25th of July 2018 with info on how to install & access kubernetes dashboard)**
 
 Hello everyone,
 
-This is a the first article of a series about deploying a webapp on a Kubernetes cluster running on OVH infrastructure.
+You could be interested as well by the following article : [How to use gitlab pipelines to deploy to kubernetes](2018/07/30/gitlab-pipelines-deploy-kubernetes-ovh.html)
 
 <br>In the following article I will demonstrate how to :
 
 - Deploy Kubernetes with 2 [nodes](https://kubernetes.io/docs/concepts/architecture/nodes/) (the master an a minion)
 - Setup [flannel](https://github.com/coreos/flannel) as the network plugin
+- Install and expose the kubernetes-dashboard application
 
 # Infrastructure description
 
